@@ -74,22 +74,22 @@ private extension DebugRingView {
             let offsetX = bounds.width * 0.5
             let offsetY = bounds.height * 0.5
             
-            let superViewBounds = superview!.bounds
-            
-            if location.x > superViewBounds.width * 0.5 {
-                location.x = superViewBounds.width - offsetX
-            } else {
+            let superview = superview!
+            let superviewWidth = superview.bounds.width
+            let superviewHeight = superview.bounds.height
+            let safeAreaInsets = superview.safeAreaInsets
+
+            if location.x > superviewWidth * 0.5 {
+                location.x = superviewWidth - offsetX
+            }
+            else {
                 location.x = offsetX
             }
 
-            let minimumY = safeAreaTop + offsetY
-            let maximumY = superViewBounds.height - offsetY - safeAreaBottom
+            let minimumY = safeAreaInsets.top + offsetY
+            let maximumY = superviewHeight - offsetY - safeAreaInsets.bottom
 
-            if location.y < minimumY {
-                location.y = minimumY
-            } else if location.y > maximumY {
-                location.y = maximumY
-            }
+            location.y = min(max(minimumY, location.y), maximumY)
 
             UIView.animate(withDuration: 0.5) {
                 self.center = location

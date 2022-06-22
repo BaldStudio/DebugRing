@@ -10,20 +10,6 @@ import UIKit
 
 extension UIView {
     
-    var safeAreaTop: CGFloat {
-        if #available(iOS 11.0, *) {
-            return safeAreaInsets.top
-        }
-        return 0.0
-    }
-    
-    var safeAreaBottom: CGFloat {
-        if #available(iOS 11.0, *) {
-            return safeAreaInsets.bottom
-        }
-        return 0.0
-    }
-
     func edgesEqual(to v: UIView, with insets: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

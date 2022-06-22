@@ -31,7 +31,7 @@ final class DeviceItem: ListViewItem {
     }
 }
 
-private class DeviceItemCell: ListViewCell {
+private final class DeviceItemCell: ListViewCell {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()

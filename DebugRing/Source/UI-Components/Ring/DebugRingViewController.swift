@@ -86,20 +86,19 @@ extension DebugRingViewController {
     /*  解决 UIMenu (UICalloutBar) 显示问题
      */
     private func findMenuWindow() -> UIWindow? {
-        let wcs = ["UI", "TextE", "ffect", "sW", "indow"].joined()
-        guard let windowClass = NSClassFromString(wcs)
+        let wc = ["UI", "TextE", "ffect", "sW", "indow"].joined()
+        guard let windowClass = NSClassFromString(wc)
         else { return nil }
         
-        let bcs = ["UI", "Cal", "lout", "Bar"].joined()
-        guard let barClass = NSClassFromString(bcs)
+        let bc = ["UI", "Cal", "lout", "Bar"].joined()
+        guard let barClass = NSClassFromString(bc)
         else { return nil }
         
-        for w in UIApplication.shared.windows {
-            if !w.isKind(of: windowClass) { continue }
+        for win in UIApplication.shared.windows {
+            if !win.isKind(of: windowClass) { continue }
             
-            for v in w.subviews {
-                if !v.isKind(of: barClass) { continue }
-                return w;
+            for subview in win.subviews {
+                if subview.isKind(of: barClass) { return win }
             }
 
         }
