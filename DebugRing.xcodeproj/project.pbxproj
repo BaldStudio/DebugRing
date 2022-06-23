@@ -23,13 +23,17 @@
 		D23FF0D025AD9B5200D755D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0CE25AD9B5200D755D9 /* Main.storyboard */; };
 		D23FF0D225AD9B5500D755D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0D125AD9B5500D755D9 /* Assets.xcassets */; };
 		D23FF0D525AD9B5500D755D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0D325AD9B5500D755D9 /* LaunchScreen.storyboard */; };
+		D2644E8B2864AB7C0065D039 /* DebugCrashPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */; };
+		D2644E8C2864AB7C0065D039 /* DebugCrashPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */; };
+		D2644E902864AF270065D039 /* DebugCrashViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2644E8E2864AF270065D039 /* DebugCrashViewController.h */; };
+		D2644E912864AF270065D039 /* DebugCrashViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */; };
+		D2644E922864B45D0065D039 /* DebugPlugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = D29115C3284EDB67000989DF /* DebugPlugins.plist */; };
 		D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A8A982520AEAC006A6125 /* DebugController.swift */; };
 		D29115A6284EC04B000989DF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115A5284EC04B000989DF /* NavigationController.swift */; };
 		D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BB284EC807000989DF /* CollectionViewController.swift */; };
 		D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BD284EC9A1000989DF /* PluginGroup.swift */; };
 		D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BF284EC9A9000989DF /* PluginItem.swift */; };
 		D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115C1284ECAE9000989DF /* PluginRegistrar.swift */; };
-		D29115C4284EDB67000989DF /* DebugPlugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = D29115C3284EDB67000989DF /* DebugPlugins.plist */; };
 		D29115C6284EED77000989DF /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115C5284EED77000989DF /* MachO.swift */; };
 		D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115D5284F013C000989DF /* FlexPlugin.swift */; };
 		D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DC284F0A37000989DF /* DevicePlugin.swift */; };
@@ -80,6 +84,10 @@
 		D23FF0D125AD9B5500D755D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D23FF0D425AD9B5500D755D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23FF0D625AD9B5500D755D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugCrashPlugin.h; sourceTree = "<group>"; };
+		D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugCrashPlugin.m; sourceTree = "<group>"; };
+		D2644E8E2864AF270065D039 /* DebugCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugCrashViewController.h; sourceTree = "<group>"; };
+		D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugCrashViewController.mm; sourceTree = "<group>"; };
 		D27A8A1D25203F1A006A6125 /* DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27A8A982520AEAC006A6125 /* DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
 		D29115A5284EC04B000989DF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -167,6 +175,17 @@
 				D2A3333927D0A20300705185 /* Supporting Files */,
 			);
 			path = DebugRingDemo;
+			sourceTree = "<group>";
+		};
+		D2644E8D2864AEB10065D039 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */,
+				D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */,
+				D2644E8E2864AF270065D039 /* DebugCrashViewController.h */,
+				D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		D27A8A1325203F1A006A6125 = {
@@ -336,6 +355,7 @@
 				D2F42E1A284EA1C000FAF01D /* DebugRing.h */,
 				D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */,
 				D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */,
+				D2644E8D2864AEB10065D039 /* Plugins */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";
@@ -371,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */,
+				D2644E902864AF270065D039 /* DebugCrashViewController.h in Headers */,
+				D2644E8B2864AB7C0065D039 /* DebugCrashPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +483,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23FF0D525AD9B5500D755D9 /* LaunchScreen.storyboard in Resources */,
-				D29115C4284EDB67000989DF /* DebugPlugins.plist in Resources */,
 				D23FF0D225AD9B5500D755D9 /* Assets.xcassets in Resources */,
 				D23FF0D025AD9B5200D755D9 /* Main.storyboard in Resources */,
 			);
@@ -471,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2644E922864B45D0065D039 /* DebugPlugins.plist in Resources */,
 				D211C74B26AD2C6800432511 /* DebugRing.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +603,7 @@
 				D22590BA284F1F5700F1188B /* ListViewItem.swift in Sources */,
 				D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */,
 				D22590AE284F112C00F1188B /* DeviceItem.swift in Sources */,
+				D2644E912864AF270065D039 /* DebugCrashViewController.mm in Sources */,
 				D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */,
 				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
@@ -589,6 +612,7 @@
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
 				D2D49FBE28514C60006B5448 /* PerfMonitorView.swift in Sources */,
+				D2644E8C2864AB7C0065D039 /* DebugCrashPlugin.m in Sources */,
 				D22590BC284F1FEC00F1188B /* CollectionViewItem.swift in Sources */,
 				D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */,
 				D2D49FD2285154D4006B5448 /* PerfMonitorHelper.swift in Sources */,
@@ -823,6 +847,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "DebugRing/Supporting Files/DebugRing-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -10,7 +10,8 @@ import UIKit
 
 public typealias DebugPlugin = DebugPluginRepresentable & NSObject
 
-public protocol DebugPluginRepresentable: NSObject {
+@objc
+public protocol DebugPluginRepresentable {
     
     var name: String { get }
     var icon: UIImage { get }

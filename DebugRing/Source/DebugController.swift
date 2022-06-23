@@ -79,6 +79,7 @@ public extension DebugController {
         shared.ring.dismiss(animated: true)
     }
     
+    @objc
     static func push(_ viewController: UIViewController) {
         if let pre = navigator.topViewController {
             pre.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil,
@@ -90,6 +91,7 @@ public extension DebugController {
         navigator.pushViewController(viewController, animated: true)
     }
     
+    @objc
     static func popViewController() {
         navigator.popViewController(animated: true)
     }
