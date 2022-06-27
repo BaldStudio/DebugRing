@@ -137,12 +137,10 @@ extension DebugController {
         logger.debug("DebugRing已启动")
         show()
         
-        if #available(iOS 13.0, *) {
-            for scene in UIApplication.shared.connectedScenes {
-                if scene.activationState == .foregroundActive,
-                    let windowScene = scene as? UIWindowScene {
-                    shared.window.windowScene = windowScene
-                }
+        for scene in UIApplication.shared.connectedScenes {
+            if scene.activationState == .foregroundActive,
+                let windowScene = scene as? UIWindowScene {
+                shared.window.windowScene = windowScene
             }
         }
     }
@@ -156,14 +154,9 @@ public class DebugRingLoader: NSObject, DebueRingLoadAutomatable {
         
         DebugWindow.replaceMethods()
         
-        var noteName = UIApplication.didFinishLaunchingNotification
-        if #available(iOS 13.0, *) {
-            noteName = UIScene.didActivateNotification
-        }
-        
         NotificationCenter.default.addObserver(DebugController.self,
                                                selector: #selector(DebugController.onApplicationDidFinishLaunching(_:)),
-                                               name: noteName,
+                                               name: UIScene.didActivateNotification,
                                                object: nil)
 
     }

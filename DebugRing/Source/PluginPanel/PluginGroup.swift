@@ -10,6 +10,9 @@ import UIKit
 
 final class PluginGroup: BsCollectionViewSection {
     
+    private let numberOfRow = 4
+    private(set) var itemSize: CGSize = .zero
+    
     override init() {
         super.init()
         
@@ -17,5 +20,10 @@ final class PluginGroup: BsCollectionViewSection {
         minimumLineSpacing = 8
         minimumInteritemSpacing = 8
         
+        let spacing = insets.left + insets.right + minimumInteritemSpacing * CGFloat((numberOfRow - 1))
+        let width = floor((Screen.width - spacing) / CGFloat(numberOfRow))
+        itemSize = CGSize(width: width, height: width)
+
     }
+
 }

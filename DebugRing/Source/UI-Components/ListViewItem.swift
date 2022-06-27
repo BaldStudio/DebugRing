@@ -36,8 +36,7 @@ class ListViewCell: CollectioViewCell {
             separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             separator.leftAnchor.constraint(equalTo: contentView.leftAnchor,
                                               constant: 16),
-            separator.rightAnchor.constraint(equalTo: contentView.rightAnchor,
-                                             constant: 48),
+            separator.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             separator.heightAnchor.constraint(equalToConstant: 0.5)
         ])
 

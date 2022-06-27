@@ -32,20 +32,14 @@ final class PluginPanel: CollectionViewController {
         let group = PluginGroup()
         collectionView.append(section: group)
         
-        let numberOfRow = 4
-        let spacing = group.insets.left + group.insets.right + group.minimumInteritemSpacing * CGFloat((numberOfRow - 1))
-        let width = floor((Screen.width - spacing) / CGFloat(numberOfRow))
-        
         let plugins = DebugController.shared.pluginRegistrar.plugins
         for name in plugins {
             guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type
             else { continue }
-            
-            let plugin = pluginClass.init()
-            
+                        
             let item = PluginItem()
-            item.plugin = plugin
-            item.cellSize = CGSize(width: width, height: width)
+            item.plugin = pluginClass.init()
+            item.cellSize = group.itemSize
             group.append(item)
         }
     }

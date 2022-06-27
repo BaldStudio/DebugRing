@@ -84,35 +84,23 @@ private extension UIApplication {
     
     static var appKeyWindow: UIWindow {
         
-        if #available(iOS 13.0, *) {
-            for scene in shared.connectedScenes {
-                if scene.activationState == .foregroundActive,
-                   let windowScene = scene as? UIWindowScene {
-                    if #available(iOS 15.0, *),
-                        let keyWindow = windowScene.keyWindow {
-                        return keyWindow
-                    }
-                    else {
-                        for window in windowScene.windows {
-                            if window.isKeyWindow {
-                                return window
-                            }
+        for scene in shared.connectedScenes {
+            if scene.activationState == .foregroundActive,
+               let windowScene = scene as? UIWindowScene {
+                if #available(iOS 15.0, *),
+                    let keyWindow = windowScene.keyWindow {
+                    return keyWindow
+                }
+                else {
+                    for window in windowScene.windows {
+                        if window.isKeyWindow {
+                            return window
                         }
                     }
                 }
             }
         }
-        else {
-            if let window = shared.keyWindow {
-                return window
-            }
-            
-            for window in shared.windows {
-                if window.isKeyWindow {
-                    return window
-                }
-            }
-        }
+        
         fatalError("未找到keyWindow")
     }
 

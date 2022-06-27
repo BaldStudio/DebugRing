@@ -213,45 +213,30 @@ struct DeviceHelper {
         return unknown
 #else
         let info = CTTelephonyNetworkInfo()
-        
-        if #available(iOS 12.0, *) {
-            
-            if let carriers = info.serviceSubscriberCellularProviders {
-                if carriers.keys.count == 0 {
-                    return unknown
-                }
-                else {
-                    
-                    var supplier = ""
-                    
-                    for (index, carrier) in carriers.values.enumerated() {
-                        if (carrier.carrierName == nil) { return unknown }
-                        
-                        //查看运营商信息 通过CTCarrier类
-                        if index == 0 {
-                            supplier = carrier.carrierName!
-                        }
-                        else {
-                            supplier = supplier + "," + carrier.carrierName!
-                        }
-                    }
-                    
-                    return supplier
-                }
+        if let carriers = info.serviceSubscriberCellularProviders {
+            if carriers.keys.count == 0 {
+                return unknown
             }
             else {
-                return unknown
+                
+                var supplier = ""
+                
+                for (index, carrier) in carriers.values.enumerated() {
+                    if (carrier.carrierName == nil) { return unknown }
+                    
+                    //查看运营商信息 通过CTCarrier类
+                    if index == 0 {
+                        supplier = carrier.carrierName!
+                    }
+                    else {
+                        supplier = supplier + "," + carrier.carrierName!
+                    }
+                }
+                
+                return supplier
             }
         }
         else {
-            if let carrier = info.subscriberCellularProvider {
-                if (carrier.carrierName == nil) {
-                    return unknown
-                }
-                    
-                return carrier.carrierName!
-            }
-            
             return unknown
         }
 #endif
