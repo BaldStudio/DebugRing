@@ -12,8 +12,7 @@ final class PerfMonitorPlugin: DebugPlugin {
     
     private lazy var monitorView = PerfMonitorView.shared
 
-    var name: String = "性能监控"
-    var icon: UIImage = UIImage(systemName: "circle")!
+    let name = "性能监控"
         
     func onDidSelect() {
         monitorView.toggle()

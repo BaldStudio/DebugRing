@@ -11,8 +11,8 @@ import FLEX
 
 final class FlexPlugin: DebugPlugin {
     
-    var name: String = "FLEX"
-    var icon: UIImage = UIImage(systemName: "circle")!
+    let name = "FLEX"
+    let icon = UIImage(named: "flex", in: DebugRing.bundle, with: nil)
         
     func onDidSelect() {
         FLEXManager.shared.toggleExplorer()

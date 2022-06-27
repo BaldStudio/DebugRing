@@ -1,12 +1,12 @@
 //
-//  DebugCrashViewController.m
+//  DebugCrashMocker.m
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/23.
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-#import "DebugCrashViewController.h"
+#import "DebugCrashMocker.h"
 #import <objc/runtime.h>
 #include <exception>
 #include <string>
@@ -46,10 +46,10 @@ typedef struct class_rw {
     char *demangledName;
 } class_rw_t;
 
-#if !__LP64__
-#define FAST_DATA_MASK          0xfffffffcUL
-#else
+#if __LP64__
 #define FAST_DATA_MASK          0x00007ffffffffff8UL
+#else
+#define FAST_DATA_MASK          0xfffffffcUL
 #endif
 
 // text_exception uses a dynamically-allocated internal c-string for what():
@@ -71,41 +71,37 @@ public:
     }
 };
 
-// MARK: -
+// MARK: - Mocker
 
-@interface DebugCrashViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DebugCrashMocker ()
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *data;
 @property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) NSArray *data;
 
 @end
 
-@implementation DebugCrashViewController
+@implementation DebugCrashMocker
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.title = @"模拟Crash";
-    
-    self.queue = [[NSOperationQueue alloc] init];
-    [self setupData];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"reusecell"];
-    [self.view addSubview:self.tableView];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setupData];
+        self.queue = [[NSOperationQueue alloc] init];
+    }
+    return self;
 }
 
-- (void)testOverflow __attribute__ ((optnone)) {
+- (NSArray<NSArray<NSString *> *> *)caseData {
+    return self.data;
+}
+
+- (void)test_Overflow __attribute__ ((optnone)) {
     char a[200];
-    [self testOverflow];
+    [self test_Overflow];
     a[1] = 'b';
 }
 
-- (void)testOverflow2 __attribute__ ((optnone))
-{
+- (void)test_Overflow2 __attribute__ ((optnone)) {
     
     NSOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"op1 begin");
@@ -128,9 +124,9 @@ public:
     [self.queue addOperation:op1];
     [op1 addDependency:op2];
     [op2 addDependency:op1];
-//    [op2 addDependency:op3];
-//    [op3 addDependency:op1];
-//    [self.queue addOperations:@[op2, op3] waitUntilFinished:NO];
+    [op2 addDependency:op3];
+    [op3 addDependency:op1];
+    [self.queue addOperations:@[op2, op3] waitUntilFinished:NO];
     
 }
 
@@ -245,10 +241,6 @@ public:
     });
 }
 
-- (void)testDoubleRelease {
-//    [TestNonArc doubleRelease];
-}
-
 - (void)test_objc_fatal __attribute__ ((optnone)) {
     Class aCls = [self class];
     class_rw_t *aCls_rw = *(class_rw_t **)((uintptr_t)aCls + 4 * sizeof(uintptr_t));
@@ -269,13 +261,10 @@ public:
 
 static void test1() __attribute__ ((optnone)) {
     __builtin_trap();
-
 }
 
 - (void)test_Backtrace __attribute__ ((optnone)) {
     test1();
-    
-    
 }
 
 - (void)crashWhenBlockRelease {
@@ -367,10 +356,10 @@ void test(void) {
         @"test_SIGILL"],
       
       @[@"Stack overflow",
-        @"testOverflow"],
+        @"test_Overflow"],
       
       @[@"Stack overflow2",
-        @"testOverflow2"],
+        @"test_Overflow2"],
       
       @[@"Crash _objc_Fatal",
         @"test_objc_fatal"],
@@ -386,10 +375,7 @@ void test(void) {
       
       @[@"exit_bg",
         @"test_exit_bg"],
-      
-      @[@"testDoubleRelease",
-        @"testDoubleRelease"],
-      
+            
       @[@"crashWhenBlockRelease",
         @"crashWhenBlockRelease"],
     
@@ -397,29 +383,6 @@ void test(void) {
         @"crashWhenBlockRelease2"],
       
     ];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reusecell"];
-    if (cell) {
-        cell.textLabel.text = [[self.data objectAtIndex:indexPath.row] objectAtIndex:0];
-    }
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSString *sel = [[self.data objectAtIndex:indexPath.row] objectAtIndex:1];
-    if ([self respondsToSelector:NSSelectorFromString(sel)]) {
-        [self performSelector:NSSelectorFromString(sel)];
-    }
 }
 
 @end

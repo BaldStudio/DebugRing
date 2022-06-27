@@ -10,9 +10,9 @@ import UIKit
 
 final class DevicePlugin: DebugPlugin {
     
-    var name: String = "设备信息"
-    var icon: UIImage = UIImage(systemName: "circle")!
-        
+    let name = "设备信息"
+    let icon = UIImage(named: "device.info", in: DebugRing.bundle, with: nil)
+
     func onDidSelect() {
         let detail = DeviceViewController()
         detail.title = name

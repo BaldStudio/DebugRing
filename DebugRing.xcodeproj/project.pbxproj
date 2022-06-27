@@ -23,11 +23,12 @@
 		D23FF0D025AD9B5200D755D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0CE25AD9B5200D755D9 /* Main.storyboard */; };
 		D23FF0D225AD9B5500D755D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0D125AD9B5500D755D9 /* Assets.xcassets */; };
 		D23FF0D525AD9B5500D755D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23FF0D325AD9B5500D755D9 /* LaunchScreen.storyboard */; };
-		D2644E8B2864AB7C0065D039 /* DebugCrashPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */; };
-		D2644E8C2864AB7C0065D039 /* DebugCrashPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */; };
-		D2644E902864AF270065D039 /* DebugCrashViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2644E8E2864AF270065D039 /* DebugCrashViewController.h */; };
-		D2644E912864AF270065D039 /* DebugCrashViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */; };
+		D2644E902864AF270065D039 /* DebugCrashMocker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2644E8E2864AF270065D039 /* DebugCrashMocker.h */; };
+		D2644E912864AF270065D039 /* DebugCrashMocker.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2644E8F2864AF270065D039 /* DebugCrashMocker.mm */; };
 		D2644E922864B45D0065D039 /* DebugPlugins.plist in Resources */ = {isa = PBXBuildFile; fileRef = D29115C3284EDB67000989DF /* DebugPlugins.plist */; };
+		D2644EFB28658DC60065D039 /* MockCrashPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2644EFA28658DC60065D039 /* MockCrashPlugin.swift */; };
+		D2644EFE28658EE00065D039 /* MockCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2644EFD28658EE00065D039 /* MockCrashViewController.swift */; };
+		D2644F00286598710065D039 /* MockCrashItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2644EFF286598710065D039 /* MockCrashItem.swift */; };
 		D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A8A982520AEAC006A6125 /* DebugController.swift */; };
 		D29115A6284EC04B000989DF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115A5284EC04B000989DF /* NavigationController.swift */; };
 		D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BB284EC807000989DF /* CollectionViewController.swift */; };
@@ -84,10 +85,11 @@
 		D23FF0D125AD9B5500D755D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D23FF0D425AD9B5500D755D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23FF0D625AD9B5500D755D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugCrashPlugin.h; sourceTree = "<group>"; };
-		D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugCrashPlugin.m; sourceTree = "<group>"; };
-		D2644E8E2864AF270065D039 /* DebugCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugCrashViewController.h; sourceTree = "<group>"; };
-		D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugCrashViewController.mm; sourceTree = "<group>"; };
+		D2644E8E2864AF270065D039 /* DebugCrashMocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugCrashMocker.h; sourceTree = "<group>"; };
+		D2644E8F2864AF270065D039 /* DebugCrashMocker.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugCrashMocker.mm; sourceTree = "<group>"; };
+		D2644EFA28658DC60065D039 /* MockCrashPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashPlugin.swift; sourceTree = "<group>"; };
+		D2644EFD28658EE00065D039 /* MockCrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashViewController.swift; sourceTree = "<group>"; };
+		D2644EFF286598710065D039 /* MockCrashItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashItem.swift; sourceTree = "<group>"; };
 		D27A8A1D25203F1A006A6125 /* DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27A8A982520AEAC006A6125 /* DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
 		D29115A5284EC04B000989DF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -177,15 +179,22 @@
 			path = DebugRingDemo;
 			sourceTree = "<group>";
 		};
-		D2644E8D2864AEB10065D039 /* Plugins */ = {
+		D2644EF928658DAA0065D039 /* MockCrash */ = {
 			isa = PBXGroup;
 			children = (
-				D2644E892864AB7C0065D039 /* DebugCrashPlugin.h */,
-				D2644E8A2864AB7C0065D039 /* DebugCrashPlugin.m */,
-				D2644E8E2864AF270065D039 /* DebugCrashViewController.h */,
-				D2644E8F2864AF270065D039 /* DebugCrashViewController.mm */,
+				D2644EFA28658DC60065D039 /* MockCrashPlugin.swift */,
+				D2644EFC28658E1A0065D039 /* Detail */,
 			);
-			path = Plugins;
+			path = MockCrash;
+			sourceTree = "<group>";
+		};
+		D2644EFC28658E1A0065D039 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D2644EFD28658EE00065D039 /* MockCrashViewController.swift */,
+				D2644EFF286598710065D039 /* MockCrashItem.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		D27A8A1325203F1A006A6125 = {
@@ -248,6 +257,7 @@
 		D29115CB284EFF4A000989DF /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				D2644EF928658DAA0065D039 /* MockCrash */,
 				D29115DE284F0ABB000989DF /* PerformanceMonitor */,
 				D29115DB284F0A0E000989DF /* Device */,
 				D29115CC284EFF73000989DF /* FLEX */,
@@ -355,7 +365,8 @@
 				D2F42E1A284EA1C000FAF01D /* DebugRing.h */,
 				D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */,
 				D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */,
-				D2644E8D2864AEB10065D039 /* Plugins */,
+				D2644E8E2864AF270065D039 /* DebugCrashMocker.h */,
+				D2644E8F2864AF270065D039 /* DebugCrashMocker.mm */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";
@@ -391,8 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */,
-				D2644E902864AF270065D039 /* DebugCrashViewController.h in Headers */,
-				D2644E8B2864AB7C0065D039 /* DebugCrashPlugin.h in Headers */,
+				D2644E902864AF270065D039 /* DebugCrashMocker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,10 +610,12 @@
 				D2F42E1E284EA7AD00FAF01D /* DebugRingView.swift in Sources */,
 				D22590E22850428600F1188B /* DebugWindow.swift in Sources */,
 				D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */,
+				D2644F00286598710065D039 /* MockCrashItem.swift in Sources */,
 				D22590BA284F1F5700F1188B /* ListViewItem.swift in Sources */,
+				D2644EFE28658EE00065D039 /* MockCrashViewController.swift in Sources */,
 				D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */,
 				D22590AE284F112C00F1188B /* DeviceItem.swift in Sources */,
-				D2644E912864AF270065D039 /* DebugCrashViewController.mm in Sources */,
+				D2644E912864AF270065D039 /* DebugCrashMocker.mm in Sources */,
 				D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */,
 				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
@@ -612,7 +624,6 @@
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
 				D2D49FBE28514C60006B5448 /* PerfMonitorView.swift in Sources */,
-				D2644E8C2864AB7C0065D039 /* DebugCrashPlugin.m in Sources */,
 				D22590BC284F1FEC00F1188B /* CollectionViewItem.swift in Sources */,
 				D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */,
 				D2D49FD2285154D4006B5448 /* PerfMonitorHelper.swift in Sources */,
@@ -622,6 +633,7 @@
 				D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */,
 				D29115A6284EC04B000989DF /* NavigationController.swift in Sources */,
 				D22590B2284F114200F1188B /* DeviceHelper.swift in Sources */,
+				D2644EFB28658DC60065D039 /* MockCrashPlugin.swift in Sources */,
 				D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

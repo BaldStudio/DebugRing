@@ -10,16 +10,19 @@ import UIKit
 
 public typealias DebugPlugin = DebugPluginRepresentable & NSObject
 
-@objc
 public protocol DebugPluginRepresentable {
     
     var name: String { get }
-    var icon: UIImage { get }
+    var icon: UIImage? { get }
         
     func onDidSelect()
 }
 
 extension DebugPluginRepresentable {
+    
+    var icon: UIImage? {
+        UIImage(systemName: "circle")
+    }
     
     func onDidSelect() {}
 }

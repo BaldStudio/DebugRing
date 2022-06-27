@@ -8,21 +8,20 @@ Pod::Spec.new do |s|
   s.author       = { 'crzorz' => 'crzorz@outlook.com' }
   s.source       = { :git => 'http://github.com/DebugRing.git', :tag => s.version.to_s }
 
+  s.platform = :ios, '13.0'
   s.swift_version = '5.0'
   s.static_framework = true
+  
+  s.source_files = 'DebugRing/Source/**/*'
 
-  s.ios.deployment_target = "13.0"
-  s.ios.source_files = 'DebugRing/Source/**/*'
-
-  s.ios.resource_bundles = {
+  s.resource_bundles = {
       s.name => [
         'DebugRing/**/*.xib',
         'DebugRing/Assets/*'
       ]
   }
   
-  s.ios.dependency 'BsListKit/CollectionView'
-  
-  s.ios.dependency 'FLEX', '4.7.0'
+  s.dependency 'BsListKit/CollectionView'
+  s.dependency 'FLEX'
   
 end

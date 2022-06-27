@@ -1,5 +1,5 @@
 //
-//  DebugCrashPlugin.h
+//  DebugCrashMocker.h
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/23.
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DebugCrashPlugin : NSObject
+@interface DebugCrashMocker : NSObject
+
+@property (nonatomic, readonly) NSArray<NSArray<NSString *> *> *caseData;
 
 @end
 

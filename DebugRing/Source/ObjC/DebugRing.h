@@ -10,5 +10,6 @@
 #define DebugRing_h
 
 #import "DebugRingDefines.h"
+#import "DebugCrashMocker.h"
 
 #endif /* DebugRing_h */
