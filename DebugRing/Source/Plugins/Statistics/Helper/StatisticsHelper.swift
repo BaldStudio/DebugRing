@@ -1,5 +1,5 @@
 //
-//  PerfMonitorHelper.swift
+//  StatisticsHelper.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/9.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PerfMonitorHelper {
+final class StatisticsHelper {
     
     enum InfoType {
         case fps
@@ -67,7 +67,7 @@ final class PerfMonitorHelper {
 }
 
 @objc
-private extension PerfMonitorHelper {
+private extension StatisticsHelper {
     
     func onTimer(_ sender: Timer) {
         infos[.cpu] = String(format: "%.f", updateCpuUsage())
@@ -91,7 +91,7 @@ private extension PerfMonitorHelper {
     }
 }
 
-private extension PerfMonitorHelper {
+private extension StatisticsHelper {
     
     func updateCpuUsage() -> Double {
         var thread_list: thread_act_array_t!

@@ -38,9 +38,9 @@
 		D29115C6284EED77000989DF /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115C5284EED77000989DF /* MachO.swift */; };
 		D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115D5284F013C000989DF /* FlexPlugin.swift */; };
 		D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DC284F0A37000989DF /* DevicePlugin.swift */; };
-		D29115E0284F0AE8000989DF /* PerfMonitorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DF284F0AE8000989DF /* PerfMonitorPlugin.swift */; };
-		D2D49FBE28514C60006B5448 /* PerfMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FBD28514C60006B5448 /* PerfMonitorView.swift */; };
-		D2D49FD2285154D4006B5448 /* PerfMonitorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* PerfMonitorHelper.swift */; };
+		D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */; };
+		D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FBD28514C60006B5448 /* StatisticsView.swift */; };
+		D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */; };
 		D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */; };
 		D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */; };
 		D2F42E1E284EA7AD00FAF01D /* DebugRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* DebugRingView.swift */; };
@@ -101,10 +101,10 @@
 		D29115C5284EED77000989DF /* MachO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachO.swift; sourceTree = "<group>"; };
 		D29115D5284F013C000989DF /* FlexPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexPlugin.swift; sourceTree = "<group>"; };
 		D29115DC284F0A37000989DF /* DevicePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlugin.swift; sourceTree = "<group>"; };
-		D29115DF284F0AE8000989DF /* PerfMonitorPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfMonitorPlugin.swift; sourceTree = "<group>"; };
+		D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPlugin.swift; sourceTree = "<group>"; };
 		D297DB782568F6390096BD54 /* DebugRing-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DebugRing-Info.plist"; sourceTree = "<group>"; };
-		D2D49FBD28514C60006B5448 /* PerfMonitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfMonitorView.swift; sourceTree = "<group>"; };
-		D2D49FD1285154D4006B5448 /* PerfMonitorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfMonitorHelper.swift; sourceTree = "<group>"; };
+		D2D49FBD28514C60006B5448 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsHelper.swift; sourceTree = "<group>"; };
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
 		D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingDefines.h; sourceTree = "<group>"; };
 		D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugRingDefines.m; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				D2644EF928658DAA0065D039 /* MockCrash */,
-				D29115DE284F0ABB000989DF /* PerformanceMonitor */,
+				D29115DE284F0ABB000989DF /* Statistics */,
 				D29115DB284F0A0E000989DF /* Device */,
 				D29115CC284EFF73000989DF /* FLEX */,
 			);
@@ -304,14 +304,14 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
-		D29115DE284F0ABB000989DF /* PerformanceMonitor */ = {
+		D29115DE284F0ABB000989DF /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				D29115DF284F0AE8000989DF /* PerfMonitorPlugin.swift */,
+				D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */,
 				D2D49FD0285154BD006B5448 /* Widgets */,
 				D2D49FCE285154AB006B5448 /* Helper */,
 			);
-			path = PerformanceMonitor;
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 		D29115E1284F0B2A000989DF /* Detail */ = {
@@ -346,7 +346,7 @@
 		D2D49FCE285154AB006B5448 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				D2D49FD1285154D4006B5448 /* PerfMonitorHelper.swift */,
+				D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 		D2D49FD0285154BD006B5448 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				D2D49FBD28514C60006B5448 /* PerfMonitorView.swift */,
+				D2D49FBD28514C60006B5448 /* StatisticsView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -623,12 +623,12 @@
 				D2F42E20284EA7B800FAF01D /* DebugRingViewController.swift in Sources */,
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
-				D2D49FBE28514C60006B5448 /* PerfMonitorView.swift in Sources */,
+				D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */,
 				D22590BC284F1FEC00F1188B /* CollectionViewItem.swift in Sources */,
 				D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */,
-				D2D49FD2285154D4006B5448 /* PerfMonitorHelper.swift in Sources */,
+				D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */,
 				D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */,
-				D29115E0284F0AE8000989DF /* PerfMonitorPlugin.swift in Sources */,
+				D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */,
 				D2F42E25284EB73100FAF01D /* Utils.swift in Sources */,
 				D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */,
 				D29115A6284EC04B000989DF /* NavigationController.swift in Sources */,

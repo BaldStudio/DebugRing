@@ -1,5 +1,5 @@
 //
-//  PerfMonitorView.swift
+//  StatisticsView.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/9.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class PerfMonitorView: UIView {
-    private lazy var monitorHelper = PerfMonitorHelper()
+final class StatisticsView: UIView {
+    private lazy var statsHelper = StatisticsHelper()
     
     private lazy var fpsLabel: UILabel = {
         let label = UILabel()
@@ -41,7 +41,7 @@ final class PerfMonitorView: UIView {
         return view
     }()
              
-    static let shared = PerfMonitorView()
+    static let shared = StatisticsView()
     
     override init(frame: CGRect) {
         let frame = CGRect(x: 0, y: 200, width: 88, height: 56)
@@ -88,7 +88,7 @@ final class PerfMonitorView: UIView {
         
         if isHidden {
             isHidden = false
-            monitorHelper.beginTracking { [weak self] in
+            statsHelper.beginTracking { [weak self] in
                 guard let self = self else { return }
                 self.fpsLabel.text = String(format:"FPS: %@", $0[.fps]!)
                 self.cpuLabel.text = String(format:"CPU: %@%%", $0[.cpu]!)
@@ -97,13 +97,13 @@ final class PerfMonitorView: UIView {
         }
         else {
             isHidden = true
-            monitorHelper.stopTracking()
+            statsHelper.stopTracking()
         }
     }
 }
 
 @objc
-private extension PerfMonitorView {
+private extension StatisticsView {
     
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)

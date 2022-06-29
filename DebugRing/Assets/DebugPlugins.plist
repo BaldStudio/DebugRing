@@ -4,7 +4,7 @@
 <array>
 	<string>FlexPlugin</string>
 	<string>DevicePlugin</string>
-	<string>PerfMonitorPlugin</string>
+	<string>StatisticsPlugin</string>
 	<string>MockCrashPlugin</string>
 </array>
 </plist>
