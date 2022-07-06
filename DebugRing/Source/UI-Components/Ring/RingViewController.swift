@@ -1,5 +1,5 @@
 //
-//  DebugRingViewController.swift
+//  RingViewController.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/7.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-final class DebugRingViewController: UIViewController {
+final class RingViewController: UIViewController {
     
     private var menuWindow: UIWindow?
     private var originMenuWindowLevel: UIWindow.Level = .normal
 
     private lazy var touchReceivers = NSHashTable<UIView>.weakObjects()
     
-    private lazy var ringView = DebugRingView()
+    private lazy var ringView = RingView()
     
-    private var window: DebugWindow {
+    private var window: RingWindow {
         DebugController.shared.window
     }
     
@@ -60,7 +60,7 @@ final class DebugRingViewController: UIViewController {
 
 }
 
-extension DebugRingViewController {
+extension RingViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +126,7 @@ extension DebugRingViewController {
 }
 
 @objc
-private extension DebugRingViewController {
+private extension RingViewController {
     
     func onMenuWillShow(_ note: Notification) {
         menuWindow = findMenuWindow()

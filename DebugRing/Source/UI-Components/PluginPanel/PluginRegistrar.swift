@@ -13,8 +13,8 @@ struct PluginRegistrar {
     var plugins: [String] = []
     
     init() {
-        if let plistPath = DebugRing.bundle.path(forResource: "DebugPlugins",
-                                                ofType: "plist") {
+        if let plistPath = Bundle.debugRing.path(forResource: "DebugPlugins",
+                                                 ofType: "plist") {
             registerPlugins(from: plistPath, for: "DebugRing")
         }
         registerPluginsFromMachO()

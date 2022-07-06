@@ -11,7 +11,7 @@ import UIKit
 final class DevicePlugin: DebugPlugin {
     
     let name = "设备信息"
-    let icon = UIImage(named: "device.info", in: DebugRing.bundle, with: nil)
+    let icon = UIImage(named: "device.info", in: .debugRing, with: nil)
 
     func onDidSelect() {
         let detail = DeviceViewController()

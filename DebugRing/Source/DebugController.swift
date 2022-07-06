@@ -10,9 +10,9 @@ import UIKit
 
 public final class DebugController: NSObject {
     
-    lazy var window = DebugWindow(frame: Screen.bounds)
+    lazy var window = RingWindow(frame: Screen.bounds)
     
-    lazy var ring = DebugRingViewController()
+    lazy var ring = RingViewController()
     
     lazy var pluginRegistrar = PluginRegistrar()
 
@@ -117,9 +117,9 @@ public extension DebugController {
 
 }
 
-//MARK: - DebugWindowDelegate
+//MARK: - RingWindowDelegate
 
-extension DebugController: DebugWindowDelegate {
+extension DebugController: RingWindowDelegate {
     
     func shouldHandleTouch(at pointInWindow: CGPoint) -> Bool {
         ring.shouldReceiveTouch(at: pointInWindow)
@@ -152,7 +152,7 @@ public class DebugRingLoader: NSObject, DebueRingLoadAutomatable {
     
     public static func objcLoad() {
         
-        DebugWindow.replaceMethods()
+        RingWindow.replaceMethods()
         
         NotificationCenter.default.addObserver(DebugController.self,
                                                selector: #selector(DebugController.onApplicationDidFinishLaunching(_:)),

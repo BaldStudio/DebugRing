@@ -11,18 +11,31 @@
 
 import OSLog
 
-//MARK: - Bundle
-
 struct DebugRing {
-    static let bundlePath = Bundle.main.path(forResource: "DebugRing",
-                                             ofType: "bundle")!
-    static let bundle = Bundle(path: bundlePath)!
-    
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
         return formatter
     }()
+    
+    struct Logger {
+        
+        func debug(_ message: Any) {
+    #if DEBUG
+            let timestamp = DebugRing.dateFormatter.string(from: Date())
+            print("\(timestamp) [DebugRing] 🟤 DEBUG - \(message)")
+    #endif
+        }
+        
+        func info(_ message: Any) {
+    #if DEBUG
+            let timestamp = DebugRing.dateFormatter.string(from: Date())
+            print("\(timestamp) [DebugRing] 🟢 INFO - \(message)")
+    #endif
+        }
+
+    }
+
 }
 
 //MARK: - Impact
@@ -35,25 +48,7 @@ func impactFeedback(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
 
 //MARK: - Logger
 
-struct DebugRingLogger {
-    
-    func debug(_ message: Any) {
-#if DEBUG
-        let timestamp = DebugRing.dateFormatter.string(from: Date())
-        print("\(timestamp) [DebugRing] 🟤 DEBUG - \(message)")
-#endif
-    }
-    
-    func info(_ message: Any) {
-#if DEBUG
-        let timestamp = DebugRing.dateFormatter.string(from: Date())
-        print("\(timestamp) [DebugRing] 🟢 INFO - \(message)")
-#endif
-    }
-
-}
-
-let logger = DebugRingLogger()
+let logger = DebugRing.Logger()
 
 struct Screen {
     static let bounds = UIScreen.main.bounds

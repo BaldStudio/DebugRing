@@ -11,7 +11,6 @@ import UIKit
 final class MockCrashPlugin: DebugPlugin {
     
     let name = "模拟Crash"
-//    let icon = UIImage(named: "crash.mock", in: DebugRing.bundle, with: nil)
 
     func onDidSelect() {
         let detail = MockCrashViewController()

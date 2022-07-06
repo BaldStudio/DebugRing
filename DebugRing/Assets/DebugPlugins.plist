@@ -3,8 +3,8 @@
 <plist version="1.0">
 <array>
 	<string>FlexPlugin</string>
-	<string>DevicePlugin</string>
 	<string>StatisticsPlugin</string>
+	<string>DevicePlugin</string>
 	<string>MockCrashPlugin</string>
 </array>
 </plist>

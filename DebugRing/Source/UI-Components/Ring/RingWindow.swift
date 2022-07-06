@@ -1,5 +1,5 @@
 //
-//  DebugWindow.swift
+//  RingWindow.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/8.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol DebugWindowDelegate: AnyObject {
+protocol RingWindowDelegate: AnyObject {
     func shouldHandleTouch(at point: CGPoint) -> Bool
     var canBecomeKeyWindow: Bool { get }
 }
 
-final class DebugWindow: UIWindow {
-    weak var delegate: DebugWindowDelegate?
+final class RingWindow: UIWindow {
+    weak var delegate: RingWindowDelegate?
     var previousKeyWindow: UIWindow?
     
     override init(frame: CGRect) {
@@ -39,8 +39,8 @@ final class DebugWindow: UIWindow {
 
     override func makeKey() {
         let window = UIApplication.appKeyWindow
-        if let debugWin = window as? DebugWindow {
-            previousKeyWindow = debugWin.previousKeyWindow
+        if let ringWindow = window as? RingWindow {
+            previousKeyWindow = ringWindow.previousKeyWindow
         }
         else {
             previousKeyWindow = window

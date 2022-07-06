@@ -23,7 +23,7 @@ class CollectionViewItem: BsCollectionViewItem {
         cell.highlightedView.isHidden = false
         cell.highlightedView.alpha = 0
         
-        UIView.animate(withDuration: 0.2,
+        UIView.animate(withDuration: 0.1,
                        delay: 0,
                        options: .curveEaseIn) {
             cell.highlightedView.alpha = 1
@@ -35,7 +35,7 @@ class CollectionViewItem: BsCollectionViewItem {
         
         guard let cell = cell as? CollectioViewCell else { return }
         
-        UIView.animate(withDuration: 0.2,
+        UIView.animate(withDuration: 0.1,
                        delay: 0,
                        options: .curveEaseOut) {
             cell.highlightedView.alpha = 0.0

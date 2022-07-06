@@ -12,7 +12,7 @@ import FLEX
 final class FlexPlugin: DebugPlugin {
     
     let name = "FLEX"
-    let icon = UIImage(named: "flex", in: DebugRing.bundle, with: nil)
+    let icon = UIImage(named: "flex", in: .debugRing, with: nil)
         
     func onDidSelect() {
         FLEXManager.shared.toggleExplorer()

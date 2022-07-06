@@ -14,7 +14,7 @@
 		D22590B2284F114200F1188B /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590B1284F114200F1188B /* DeviceHelper.swift */; };
 		D22590BA284F1F5700F1188B /* ListViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590B9284F1F5700F1188B /* ListViewItem.swift */; };
 		D22590BC284F1FEC00F1188B /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590BB284F1FEC00F1188B /* CollectionViewItem.swift */; };
-		D22590E22850428600F1188B /* DebugWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590E12850428600F1188B /* DebugWindow.swift */; };
+		D22590E22850428600F1188B /* RingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590E12850428600F1188B /* RingWindow.swift */; };
 		D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590EF2850C50A00F1188B /* CollectionViewSection.swift */; };
 		D22590F22850C78900F1188B /* DebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590F12850C78900F1188B /* DebugPlugin.swift */; };
 		D23FF0C925AD9B5200D755D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FF0C825AD9B5200D755D9 /* AppDelegate.swift */; };
@@ -41,10 +41,11 @@
 		D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */; };
 		D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FBD28514C60006B5448 /* StatisticsView.swift */; };
 		D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */; };
+		D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EA428756B810011FB46 /* Bundle++.swift */; };
 		D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */; };
 		D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */; };
-		D2F42E1E284EA7AD00FAF01D /* DebugRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* DebugRingView.swift */; };
-		D2F42E20284EA7B800FAF01D /* DebugRingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1F284EA7B800FAF01D /* DebugRingViewController.swift */; };
+		D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* RingView.swift */; };
+		D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1F284EA7B800FAF01D /* RingViewController.swift */; };
 		D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E22284EB65F00FAF01D /* UIView++.swift */; };
 		D2F42E25284EB73100FAF01D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* Utils.swift */; };
 		D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E26284EB81C00FAF01D /* PluginPanel.swift */; };
@@ -74,7 +75,7 @@
 		D22590B1284F114200F1188B /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		D22590B9284F1F5700F1188B /* ListViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewItem.swift; sourceTree = "<group>"; };
 		D22590BB284F1FEC00F1188B /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
-		D22590E12850428600F1188B /* DebugWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWindow.swift; sourceTree = "<group>"; };
+		D22590E12850428600F1188B /* RingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingWindow.swift; sourceTree = "<group>"; };
 		D22590EF2850C50A00F1188B /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
 		D22590F12850C78900F1188B /* DebugPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPlugin.swift; sourceTree = "<group>"; };
 		D23FF0C625AD9B5200D755D9 /* DebugRingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebugRingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,12 +106,13 @@
 		D297DB782568F6390096BD54 /* DebugRing-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DebugRing-Info.plist"; sourceTree = "<group>"; };
 		D2D49FBD28514C60006B5448 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsHelper.swift; sourceTree = "<group>"; };
+		D2D80EA428756B810011FB46 /* Bundle++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
 		D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingDefines.h; sourceTree = "<group>"; };
 		D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugRingDefines.m; sourceTree = "<group>"; };
 		D2F42E1A284EA1C000FAF01D /* DebugRing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRing.h; sourceTree = "<group>"; };
-		D2F42E1D284EA7AD00FAF01D /* DebugRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugRingView.swift; sourceTree = "<group>"; };
-		D2F42E1F284EA7B800FAF01D /* DebugRingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugRingViewController.swift; sourceTree = "<group>"; };
+		D2F42E1D284EA7AD00FAF01D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		D2F42E1F284EA7B800FAF01D /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		D2F42E22284EB65F00FAF01D /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
 		D2F42E24284EB73100FAF01D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2F42E26284EB81C00FAF01D /* PluginPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPanel.swift; sourceTree = "<group>"; };
@@ -183,18 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				D2644EFA28658DC60065D039 /* MockCrashPlugin.swift */,
-				D2644EFC28658E1A0065D039 /* Detail */,
-			);
-			path = MockCrash;
-			sourceTree = "<group>";
-		};
-		D2644EFC28658E1A0065D039 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
 				D2644EFD28658EE00065D039 /* MockCrashViewController.swift */,
 				D2644EFF286598710065D039 /* MockCrashItem.swift */,
 			);
-			path = Detail;
+			path = MockCrash;
 			sourceTree = "<group>";
 		};
 		D27A8A1325203F1A006A6125 = {
@@ -232,7 +226,6 @@
 			children = (
 				D27A8A982520AEAC006A6125 /* DebugController.swift */,
 				D22590F12850C78900F1188B /* DebugPlugin.swift */,
-				D29115CE284EFFBB000989DF /* PluginPanel */,
 				D29115CB284EFF4A000989DF /* Plugins */,
 				D29115A7284EC5EF000989DF /* UI-Components */,
 				D2F42E21284EB65400FAF01D /* Utils */,
@@ -249,6 +242,7 @@
 				D22590EF2850C50A00F1188B /* CollectionViewSection.swift */,
 				D22590BB284F1FEC00F1188B /* CollectionViewItem.swift */,
 				D22590B9284F1F5700F1188B /* ListViewItem.swift */,
+				D29115CE284EFFBB000989DF /* PluginPanel */,
 				D29115CD284EFFB1000989DF /* Ring */,
 			);
 			path = "UI-Components";
@@ -276,9 +270,9 @@
 		D29115CD284EFFB1000989DF /* Ring */ = {
 			isa = PBXGroup;
 			children = (
-				D22590E12850428600F1188B /* DebugWindow.swift */,
-				D2F42E1D284EA7AD00FAF01D /* DebugRingView.swift */,
-				D2F42E1F284EA7B800FAF01D /* DebugRingViewController.swift */,
+				D22590E12850428600F1188B /* RingWindow.swift */,
+				D2F42E1D284EA7AD00FAF01D /* RingView.swift */,
+				D2F42E1F284EA7B800FAF01D /* RingViewController.swift */,
 			);
 			path = Ring;
 			sourceTree = "<group>";
@@ -298,8 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				D29115DC284F0A37000989DF /* DevicePlugin.swift */,
-				D2D49FCD2851549E006B5448 /* Helper */,
-				D29115E1284F0B2A000989DF /* Detail */,
+				D22590AB284F10EF00F1188B /* DeviceViewController.swift */,
+				D22590AD284F112C00F1188B /* DeviceItem.swift */,
+				D22590B1284F114200F1188B /* DeviceHelper.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -308,19 +303,10 @@
 			isa = PBXGroup;
 			children = (
 				D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */,
-				D2D49FD0285154BD006B5448 /* Widgets */,
-				D2D49FCE285154AB006B5448 /* Helper */,
+				D2D49FBD28514C60006B5448 /* StatisticsView.swift */,
+				D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */,
 			);
 			path = Statistics;
-			sourceTree = "<group>";
-		};
-		D29115E1284F0B2A000989DF /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				D22590AB284F10EF00F1188B /* DeviceViewController.swift */,
-				D22590AD284F112C00F1188B /* DeviceItem.swift */,
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		D2A3333927D0A20300705185 /* Supporting Files */ = {
@@ -333,30 +319,6 @@
 				D23FF0D625AD9B5500D755D9 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D2D49FCD2851549E006B5448 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				D22590B1284F114200F1188B /* DeviceHelper.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		D2D49FCE285154AB006B5448 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		D2D49FD0285154BD006B5448 /* Widgets */ = {
-			isa = PBXGroup;
-			children = (
-				D2D49FBD28514C60006B5448 /* StatisticsView.swift */,
-			);
-			path = Widgets;
 			sourceTree = "<group>";
 		};
 		D2F42E0F284E995E00FAF01D /* ObjC */ = {
@@ -377,6 +339,7 @@
 				D2F42E24284EB73100FAF01D /* Utils.swift */,
 				D29115C5284EED77000989DF /* MachO.swift */,
 				D2F42E22284EB65F00FAF01D /* UIView++.swift */,
+				D2D80EA428756B810011FB46 /* Bundle++.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -607,8 +570,8 @@
 			files = (
 				D22590AC284F10EF00F1188B /* DeviceViewController.swift in Sources */,
 				D22590F22850C78900F1188B /* DebugPlugin.swift in Sources */,
-				D2F42E1E284EA7AD00FAF01D /* DebugRingView.swift in Sources */,
-				D22590E22850428600F1188B /* DebugWindow.swift in Sources */,
+				D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */,
+				D22590E22850428600F1188B /* RingWindow.swift in Sources */,
 				D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */,
 				D2644F00286598710065D039 /* MockCrashItem.swift in Sources */,
 				D22590BA284F1F5700F1188B /* ListViewItem.swift in Sources */,
@@ -620,7 +583,7 @@
 				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
 				D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */,
-				D2F42E20284EA7B800FAF01D /* DebugRingViewController.swift in Sources */,
+				D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */,
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
 				D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */,
@@ -635,6 +598,7 @@
 				D22590B2284F114200F1188B /* DeviceHelper.swift in Sources */,
 				D2644EFB28658DC60065D039 /* MockCrashPlugin.swift in Sources */,
 				D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */,
+				D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

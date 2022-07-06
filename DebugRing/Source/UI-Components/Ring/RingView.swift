@@ -1,5 +1,5 @@
 //
-//  DebugRingView.swift
+//  RingView.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/7.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DebugRingView: UIView {
+final class RingView: UIView {
     
     override init(frame: CGRect) {
         let frame = CGRect(x: 0, y: 200, width: 64, height: 64)
@@ -22,7 +22,7 @@ final class DebugRingView: UIView {
         clipsToBounds = true
         isUserInteractionEnabled = true
         
-        accessibilityIdentifier = "DebugRingView"
+        accessibilityIdentifier = "RingView"
         
         willChangeRingColor()
         
@@ -36,7 +36,7 @@ final class DebugRingView: UIView {
 
 //MARK: - Gestures
 
-private extension DebugRingView {
+private extension RingView {
     
     func setupGestures() {
         
@@ -56,7 +56,7 @@ private extension DebugRingView {
 }
 
 @objc
-private extension DebugRingView {
+private extension RingView {
     
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)
@@ -119,7 +119,7 @@ private extension DebugRingView {
 
 //MARK: - Change Color
 
-private extension DebugRingView {
+private extension RingView {
     
     func willChangeRingColor() {
         perform(#selector(changeRingColor), with: nil, afterDelay: 2)
