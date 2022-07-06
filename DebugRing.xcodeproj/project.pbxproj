@@ -42,6 +42,7 @@
 		D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FBD28514C60006B5448 /* StatisticsView.swift */; };
 		D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */; };
 		D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EA428756B810011FB46 /* Bundle++.swift */; };
+		D2D80EAB28757B4C0011FB46 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */; };
 		D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */; };
 		D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */; };
 		D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* RingView.swift */; };
@@ -107,6 +108,7 @@
 		D2D49FBD28514C60006B5448 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsHelper.swift; sourceTree = "<group>"; };
 		D2D80EA428756B810011FB46 /* Bundle++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
+		D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
 		D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingDefines.h; sourceTree = "<group>"; };
 		D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugRingDefines.m; sourceTree = "<group>"; };
@@ -237,13 +239,10 @@
 		D29115A7284EC5EF000989DF /* UI-Components */ = {
 			isa = PBXGroup;
 			children = (
-				D29115A5284EC04B000989DF /* NavigationController.swift */,
-				D29115BB284EC807000989DF /* CollectionViewController.swift */,
-				D22590EF2850C50A00F1188B /* CollectionViewSection.swift */,
-				D22590BB284F1FEC00F1188B /* CollectionViewItem.swift */,
-				D22590B9284F1F5700F1188B /* ListViewItem.swift */,
-				D29115CE284EFFBB000989DF /* PluginPanel */,
+				D2D80EA828757B2C0011FB46 /* Base */,
 				D29115CD284EFFB1000989DF /* Ring */,
+				D29115CE284EFFBB000989DF /* PluginPanel */,
+				D2D80EA928757B360011FB46 /* Spinner */,
 			);
 			path = "UI-Components";
 			sourceTree = "<group>";
@@ -319,6 +318,26 @@
 				D23FF0D625AD9B5500D755D9 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D80EA828757B2C0011FB46 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D29115A5284EC04B000989DF /* NavigationController.swift */,
+				D29115BB284EC807000989DF /* CollectionViewController.swift */,
+				D22590EF2850C50A00F1188B /* CollectionViewSection.swift */,
+				D22590BB284F1FEC00F1188B /* CollectionViewItem.swift */,
+				D22590B9284F1F5700F1188B /* ListViewItem.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D2D80EA928757B360011FB46 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */,
+			);
+			path = Spinner;
 			sourceTree = "<group>";
 		};
 		D2F42E0F284E995E00FAF01D /* ObjC */ = {
@@ -588,6 +607,7 @@
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
 				D2D49FBE28514C60006B5448 /* StatisticsView.swift in Sources */,
 				D22590BC284F1FEC00F1188B /* CollectionViewItem.swift in Sources */,
+				D2D80EAB28757B4C0011FB46 /* SpinnerViewController.swift in Sources */,
 				D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */,
 				D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */,
 				D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */,

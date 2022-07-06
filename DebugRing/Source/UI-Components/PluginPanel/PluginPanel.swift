@@ -9,7 +9,7 @@
 import UIKit
 
 final class PluginPanel: CollectionViewController {
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,18 +29,28 @@ final class PluginPanel: CollectionViewController {
 
     private func setupDataSource() {
         
-        let group = PluginGroup()
-        collectionView.append(section: group)
+        let spinner = SpinnerViewController()
+        spinner.show(in: self)
         
-        let plugins = DebugController.shared.pluginRegistrar.plugins
-        for name in plugins {
-            guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type
-            else { continue }
-                        
-            let item = PluginItem()
-            item.plugin = pluginClass.init()
-            item.cellSize = group.itemSize
-            group.append(item)
+        DispatchQueue.global().async {
+            let group = PluginGroup()
+            self.collectionView.append(section: group)
+            
+            let plugins = DebugController.shared.pluginRegistrar.plugins
+            for name in plugins {
+                guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type
+                else { continue }
+                            
+                let item = PluginItem()
+                item.plugin = pluginClass.init()
+                item.cellSize = group.itemSize
+                group.append(item)
+            }
+
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                spinner.hide()
+            }
         }
     }
 }
