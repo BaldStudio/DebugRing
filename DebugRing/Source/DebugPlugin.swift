@@ -18,7 +18,7 @@ public protocol DebugPluginRepresentable: AnyObject {
     func onDidSelect()
 }
 
-extension DebugPluginRepresentable {
+private extension DebugPluginRepresentable {
     
     var icon: UIImage? {
         UIImage(systemName: "circle")

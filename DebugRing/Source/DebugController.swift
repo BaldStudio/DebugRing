@@ -71,7 +71,6 @@ public extension DebugController {
 
     static func present(_ viewController: UIViewController) {
         let nav = NavigationController(rootViewController: viewController)
-        nav.modalPresentationStyle = .fullScreen
         shared.ring.present(nav, animated: true)
     }
     
@@ -132,7 +131,7 @@ extension DebugController: RingWindowDelegate {
 }
 
 @objc
-extension DebugController {
+private extension DebugController {
     static func onApplicationDidFinishLaunching(_ note: Notification) {
         logger.debug("DebugRing已启动")
         show()

@@ -8,7 +8,16 @@
 
 import UIKit
 
-class NavigationController: UINavigationController {
+final class NavigationController: UINavigationController {
+    
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        modalPresentationStyle = .fullScreen
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override var shouldAutorotate: Bool {
         topViewController?.shouldAutorotate ?? super.shouldAutorotate

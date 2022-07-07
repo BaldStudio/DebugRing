@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
   
   s.source_files = 'DebugRing/Source/**/*'
-
+  
   s.resource_bundles = {
       s.name => [
         'DebugRing/**/*.xib',

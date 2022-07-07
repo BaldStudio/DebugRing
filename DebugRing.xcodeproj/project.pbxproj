@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19035713EDE8B2C1B71AC758 /* Pods_DebugRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCC9DF46A78FC0976C7D431 /* Pods_DebugRing.framework */; };
+		A78E956C5CBC2DCF29ACC1AE /* Pods_DebugRingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0181F18FCDF593DFB95305E /* Pods_DebugRingDemo.framework */; };
+		B103849D11DAE7DD942C3422 /* Pods_DebugRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F04F64C4B58EF1FD49522 /* Pods_DebugRing.framework */; };
 		D211C74B26AD2C6800432511 /* DebugRing.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D211C74A26AD2C6800432511 /* DebugRing.xcassets */; };
 		D22590AC284F10EF00F1188B /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590AB284F10EF00F1188B /* DeviceViewController.swift */; };
 		D22590AE284F112C00F1188B /* DeviceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590AD284F112C00F1188B /* DeviceItem.swift */; };
@@ -30,6 +31,8 @@
 		D2644EFE28658EE00065D039 /* MockCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2644EFD28658EE00065D039 /* MockCrashViewController.swift */; };
 		D2644F00286598710065D039 /* MockCrashItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2644EFF286598710065D039 /* MockCrashItem.swift */; };
 		D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A8A982520AEAC006A6125 /* DebugController.swift */; };
+		D28D89B228767DF7007A8BB0 /* DebugRing-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E1A284EA1C000FAF01D /* DebugRing-Bridging.h */; };
+		D28D89B428767ECD007A8BB0 /* DebugRingAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = D28D89B328767ECD007A8BB0 /* DebugRingAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D29115A6284EC04B000989DF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115A5284EC04B000989DF /* NavigationController.swift */; };
 		D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BB284EC807000989DF /* CollectionViewController.swift */; };
 		D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BD284EC9A1000989DF /* PluginGroup.swift */; };
@@ -43,14 +46,13 @@
 		D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */; };
 		D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EA428756B810011FB46 /* Bundle++.swift */; };
 		D2D80EAB28757B4C0011FB46 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */; };
-		D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */; };
-		D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */; };
+		D2F42E0E284E995A00FAF01D /* DebugRingBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F42E0D284E995A00FAF01D /* DebugRingBootstrap.h */; };
+		D2F42E11284E9B9B00FAF01D /* DebugRingBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E10284E9B9B00FAF01D /* DebugRingBootstrap.m */; };
 		D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* RingView.swift */; };
 		D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1F284EA7B800FAF01D /* RingViewController.swift */; };
 		D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E22284EB65F00FAF01D /* UIView++.swift */; };
 		D2F42E25284EB73100FAF01D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* Utils.swift */; };
 		D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E26284EB81C00FAF01D /* PluginPanel.swift */; };
-		EDC78389B499967FE438AC2B /* Pods_DebugRingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8AD4EA21A544A6D743F7B3 /* Pods_DebugRingDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F3C1B8269CD976B8345B74 /* Pods-DebugRingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingTests.release.xcconfig"; path = "Target Support Files/Pods-DebugRingTests/Pods-DebugRingTests.release.xcconfig"; sourceTree = "<group>"; };
-		78646EF9EE58CC87A9E1C719 /* Pods-DebugRingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingTests.debug.xcconfig"; path = "Target Support Files/Pods-DebugRingTests/Pods-DebugRingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F8AD4EA21A544A6D743F7B3 /* Pods_DebugRingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		948896A69C4B40B60F6C2FC8 /* Pods-DebugRingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.release.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.release.xcconfig"; sourceTree = "<group>"; };
-		BDE13B9731850E24195204CC /* Pods_DebugRingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C467CC7E8800EF1126A27DFE /* Pods-DebugRing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.release.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.release.xcconfig"; sourceTree = "<group>"; };
+		444F1A943BD37A8213E515A4 /* Pods-DebugRingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.debug.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4BA4D470CE210A13373C09CD /* Pods-DebugRing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.release.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.release.xcconfig"; sourceTree = "<group>"; };
+		5600210468A18ECCB29FA26D /* Pods-DebugRingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.release.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C0181F18FCDF593DFB95305E /* Pods_DebugRingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D211C74A26AD2C6800432511 /* DebugRing.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DebugRing.xcassets; sourceTree = "<group>"; };
 		D22590AB284F10EF00F1188B /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		D22590AD284F112C00F1188B /* DeviceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceItem.swift; sourceTree = "<group>"; };
@@ -94,6 +94,7 @@
 		D2644EFF286598710065D039 /* MockCrashItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashItem.swift; sourceTree = "<group>"; };
 		D27A8A1D25203F1A006A6125 /* DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27A8A982520AEAC006A6125 /* DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
+		D28D89B328767ECD007A8BB0 /* DebugRingAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingAnnotation.h; sourceTree = "<group>"; };
 		D29115A5284EC04B000989DF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D29115BB284EC807000989DF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D29115BD284EC9A1000989DF /* PluginGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginGroup.swift; sourceTree = "<group>"; };
@@ -104,24 +105,23 @@
 		D29115D5284F013C000989DF /* FlexPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexPlugin.swift; sourceTree = "<group>"; };
 		D29115DC284F0A37000989DF /* DevicePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlugin.swift; sourceTree = "<group>"; };
 		D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPlugin.swift; sourceTree = "<group>"; };
-		D297DB782568F6390096BD54 /* DebugRing-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DebugRing-Info.plist"; sourceTree = "<group>"; };
+		D297DB782568F6390096BD54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2D49FBD28514C60006B5448 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsHelper.swift; sourceTree = "<group>"; };
 		D2D80EA428756B810011FB46 /* Bundle++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
 		D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
-		D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingDefines.h; sourceTree = "<group>"; };
-		D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugRingDefines.m; sourceTree = "<group>"; };
-		D2F42E1A284EA1C000FAF01D /* DebugRing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRing.h; sourceTree = "<group>"; };
+		D2F42E0D284E995A00FAF01D /* DebugRingBootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingBootstrap.h; sourceTree = "<group>"; };
+		D2F42E10284E9B9B00FAF01D /* DebugRingBootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugRingBootstrap.m; sourceTree = "<group>"; };
+		D2F42E1A284EA1C000FAF01D /* DebugRing-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebugRing-Bridging.h"; sourceTree = "<group>"; };
 		D2F42E1D284EA7AD00FAF01D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		D2F42E1F284EA7B800FAF01D /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		D2F42E22284EB65F00FAF01D /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
 		D2F42E24284EB73100FAF01D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2F42E26284EB81C00FAF01D /* PluginPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPanel.swift; sourceTree = "<group>"; };
 		D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DebugRing.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DB742499823E48A247A2C420 /* Pods-DebugRingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.debug.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		DF97781CEDD0127F54667959 /* Pods-DebugRing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.debug.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.debug.xcconfig"; sourceTree = "<group>"; };
-		EFCC9DF46A78FC0976C7D431 /* Pods_DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCA17576AB5C6F593B72721 /* Pods-DebugRing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.debug.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1F04F64C4B58EF1FD49522 /* Pods_DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC78389B499967FE438AC2B /* Pods_DebugRingDemo.framework in Frameworks */,
+				A78E956C5CBC2DCF29ACC1AE /* Pods_DebugRingDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,19 +137,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19035713EDE8B2C1B71AC758 /* Pods_DebugRing.framework in Frameworks */,
+				B103849D11DAE7DD942C3422 /* Pods_DebugRing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F8495C5596CB647357940E7 /* Frameworks */ = {
+		6351C105792FC592E585B507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFCC9DF46A78FC0976C7D431 /* Pods_DebugRing.framework */,
-				7F8AD4EA21A544A6D743F7B3 /* Pods_DebugRingDemo.framework */,
-				BDE13B9731850E24195204CC /* Pods_DebugRingTests.framework */,
+				DE1F04F64C4B58EF1FD49522 /* Pods_DebugRing.framework */,
+				C0181F18FCDF593DFB95305E /* Pods_DebugRingDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,13 +162,13 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D23DCF1D2595CCAC004EB5E3 /* Supporting Files */ = {
+		D23DCF1D2595CCAC004EB5E3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				D297DB782568F6390096BD54 /* DebugRing-Info.plist */,
+				D297DB782568F6390096BD54 /* Info.plist */,
 				D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		D23FF0C725AD9B5200D755D9 /* DebugRingDemo */ = {
@@ -178,7 +177,7 @@
 				D23FF0C825AD9B5200D755D9 /* AppDelegate.swift */,
 				D23FF0CA25AD9B5200D755D9 /* SceneDelegate.swift */,
 				D23FF0CC25AD9B5200D755D9 /* ViewController.swift */,
-				D2A3333927D0A20300705185 /* Supporting Files */,
+				D2A3333927D0A20300705185 /* SupportingFiles */,
 			);
 			path = DebugRingDemo;
 			sourceTree = "<group>";
@@ -200,7 +199,7 @@
 				D23FF0C725AD9B5200D755D9 /* DebugRingDemo */,
 				D27A8A1E25203F1A006A6125 /* Products */,
 				ECD65CE4AD0E4BC372263BE7 /* Pods */,
-				1F8495C5596CB647357940E7 /* Frameworks */,
+				6351C105792FC592E585B507 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,7 +217,7 @@
 			children = (
 				D239FB4126B5534A00FD1DA0 /* Assets */,
 				D27A8A28252052BE006A6125 /* Source */,
-				D23DCF1D2595CCAC004EB5E3 /* Supporting Files */,
+				D23DCF1D2595CCAC004EB5E3 /* SupportingFiles */,
 			);
 			path = DebugRing;
 			sourceTree = "<group>";
@@ -229,14 +228,14 @@
 				D27A8A982520AEAC006A6125 /* DebugController.swift */,
 				D22590F12850C78900F1188B /* DebugPlugin.swift */,
 				D29115CB284EFF4A000989DF /* Plugins */,
-				D29115A7284EC5EF000989DF /* UI-Components */,
+				D29115A7284EC5EF000989DF /* Components */,
 				D2F42E21284EB65400FAF01D /* Utils */,
 				D2F42E0F284E995E00FAF01D /* ObjC */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		D29115A7284EC5EF000989DF /* UI-Components */ = {
+		D29115A7284EC5EF000989DF /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				D2D80EA828757B2C0011FB46 /* Base */,
@@ -244,7 +243,7 @@
 				D29115CE284EFFBB000989DF /* PluginPanel */,
 				D2D80EA928757B360011FB46 /* Spinner */,
 			);
-			path = "UI-Components";
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D29115CB284EFF4A000989DF /* Plugins */ = {
@@ -308,7 +307,7 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		D2A3333927D0A20300705185 /* Supporting Files */ = {
+		D2A3333927D0A20300705185 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				D23FF0CE25AD9B5200D755D9 /* Main.storyboard */,
@@ -317,7 +316,7 @@
 				D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */,
 				D23FF0D625AD9B5500D755D9 /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		D2D80EA828757B2C0011FB46 /* Base */ = {
@@ -343,9 +342,10 @@
 		D2F42E0F284E995E00FAF01D /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				D2F42E1A284EA1C000FAF01D /* DebugRing.h */,
-				D2F42E0D284E995A00FAF01D /* DebugRingDefines.h */,
-				D2F42E10284E9B9B00FAF01D /* DebugRingDefines.m */,
+				D2F42E1A284EA1C000FAF01D /* DebugRing-Bridging.h */,
+				D2F42E0D284E995A00FAF01D /* DebugRingBootstrap.h */,
+				D2F42E10284E9B9B00FAF01D /* DebugRingBootstrap.m */,
+				D28D89B328767ECD007A8BB0 /* DebugRingAnnotation.h */,
 				D2644E8E2864AF270065D039 /* DebugCrashMocker.h */,
 				D2644E8F2864AF270065D039 /* DebugCrashMocker.mm */,
 			);
@@ -366,12 +366,10 @@
 		ECD65CE4AD0E4BC372263BE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF97781CEDD0127F54667959 /* Pods-DebugRing.debug.xcconfig */,
-				C467CC7E8800EF1126A27DFE /* Pods-DebugRing.release.xcconfig */,
-				DB742499823E48A247A2C420 /* Pods-DebugRingDemo.debug.xcconfig */,
-				948896A69C4B40B60F6C2FC8 /* Pods-DebugRingDemo.release.xcconfig */,
-				78646EF9EE58CC87A9E1C719 /* Pods-DebugRingTests.debug.xcconfig */,
-				00F3C1B8269CD976B8345B74 /* Pods-DebugRingTests.release.xcconfig */,
+				DCCA17576AB5C6F593B72721 /* Pods-DebugRing.debug.xcconfig */,
+				4BA4D470CE210A13373C09CD /* Pods-DebugRing.release.xcconfig */,
+				444F1A943BD37A8213E515A4 /* Pods-DebugRingDemo.debug.xcconfig */,
+				5600210468A18ECCB29FA26D /* Pods-DebugRingDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -383,7 +381,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F42E0E284E995A00FAF01D /* DebugRingDefines.h in Headers */,
+				D2F42E0E284E995A00FAF01D /* DebugRingBootstrap.h in Headers */,
+				D28D89B428767ECD007A8BB0 /* DebugRingAnnotation.h in Headers */,
+				D28D89B228767DF7007A8BB0 /* DebugRing-Bridging.h in Headers */,
 				D2644E902864AF270065D039 /* DebugCrashMocker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,12 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D23FF0D925AD9B5500D755D9 /* Build configuration list for PBXNativeTarget "DebugRingDemo" */;
 			buildPhases = (
-				1BC5A5F55F39A1F9AA2A1E7B /* [CP] Check Pods Manifest.lock */,
+				C61A422D3E40CD1AED62FA9F /* [CP] Check Pods Manifest.lock */,
 				D23FF0C225AD9B5200D755D9 /* Sources */,
 				D23FF0C325AD9B5200D755D9 /* Frameworks */,
 				D23FF0C425AD9B5200D755D9 /* Resources */,
-				D3AD7BC65D958B48DE10E6ED /* [CP] Embed Pods Frameworks */,
-				93EE9E7CFE0AB3A3CBBD63DA /* [CP] Copy Pods Resources */,
+				02B8FC292C19F1B49464F46A /* [CP] Embed Pods Frameworks */,
+				5C478FE97DE6DC73EB52C1EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,7 +416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D27A8A2525203F1A006A6125 /* Build configuration list for PBXNativeTarget "DebugRing" */;
 			buildPhases = (
-				0B595D105ED9CCE3DDBC3D23 /* [CP] Check Pods Manifest.lock */,
+				7F55291F71A020C122600C91 /* [CP] Check Pods Manifest.lock */,
 				D27A8A1825203F1A006A6125 /* Headers */,
 				D27A8A1925203F1A006A6125 /* Sources */,
 				D27A8A1A25203F1A006A6125 /* Frameworks */,
@@ -492,7 +492,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B595D105ED9CCE3DDBC3D23 /* [CP] Check Pods Manifest.lock */ = {
+		02B8FC292C19F1B49464F46A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C478FE97DE6DC73EB52C1EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F55291F71A020C122600C91 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,7 +548,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1BC5A5F55F39A1F9AA2A1E7B /* [CP] Check Pods Manifest.lock */ = {
+		C61A422D3E40CD1AED62FA9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,40 +568,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93EE9E7CFE0AB3A3CBBD63DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3AD7BC65D958B48DE10E6ED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -601,7 +601,7 @@
 				D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */,
 				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
-				D2F42E11284E9B9B00FAF01D /* DebugRingDefines.m in Sources */,
+				D2F42E11284E9B9B00FAF01D /* DebugRingBootstrap.m in Sources */,
 				D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */,
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
 				D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */,
@@ -655,17 +655,17 @@
 /* Begin XCBuildConfiguration section */
 		D23FF0D725AD9B5500D755D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB742499823E48A247A2C420 /* Pods-DebugRingDemo.debug.xcconfig */;
+			baseConfigurationReference = 444F1A943BD37A8213E515A4 /* Pods-DebugRingDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PRODUCT_NAME).profdata";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/DebugRingDemo/Supporting Files/DebugRingDemo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/SupportingFiles/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97LF6BB4ZK;
-				INFOPLIST_FILE = "$(SRCROOT)/DebugRingDemo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,25 +674,26 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bald-studio.DebugRingDemo";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D23FF0D825AD9B5500D755D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 948896A69C4B40B60F6C2FC8 /* Pods-DebugRingDemo.release.xcconfig */;
+			baseConfigurationReference = 5600210468A18ECCB29FA26D /* Pods-DebugRingDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PRODUCT_NAME).profdata";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/DebugRingDemo/Supporting Files/DebugRingDemo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/SupportingFiles/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97LF6BB4ZK;
-				INFOPLIST_FILE = "$(SRCROOT)/DebugRingDemo/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -701,9 +702,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bald-studio.DebugRingDemo";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -831,12 +833,16 @@
 		};
 		D27A8A2625203F1A006A6125 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF97781CEDD0127F54667959 /* Pods-DebugRing.debug.xcconfig */;
+			baseConfigurationReference = DCCA17576AB5C6F593B72721 /* Pods-DebugRing.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1.1;
 				DEFINES_MODULE = YES;
@@ -846,7 +852,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "DebugRing/Supporting Files/DebugRing-Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
+				INFOPLIST_PATH = "$(FULL_PRODUCT_NAME)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -856,27 +863,36 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.0.1;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bald-studio.DebugRing";
 				PRODUCT_MODULE_NAME = DebugRing;
-				PRODUCT_NAME = DebugRing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = DebugRing/Source/ObjC/DebugRing.h;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME)-Bridging.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(FULL_PRODUCT_NAME)/Resources";
 				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
 		D27A8A2725203F1A006A6125 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C467CC7E8800EF1126A27DFE /* Pods-DebugRing.release.xcconfig */;
+			baseConfigurationReference = 4BA4D470CE210A13373C09CD /* Pods-DebugRing.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1.1;
 				DEFINES_MODULE = YES;
@@ -886,7 +902,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				GCC_OPTIMIZATION_LEVEL = z;
-				INFOPLIST_FILE = "DebugRing/Supporting Files/DebugRing-Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
+				INFOPLIST_PATH = "$(FULL_PRODUCT_NAME)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -896,15 +913,20 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 0.0.1;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bald-studio.DebugRing";
 				PRODUCT_MODULE_NAME = DebugRing;
-				PRODUCT_NAME = DebugRing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = DebugRing/Source/ObjC/DebugRing.h;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME)-Bridging.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(FULL_PRODUCT_NAME)/Resources";
 				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
