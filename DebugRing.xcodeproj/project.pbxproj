@@ -47,12 +47,12 @@
 		D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E22284EB65F00FAF01D /* UIView++.swift */; };
 		D2F42E25284EB73100FAF01D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* Utils.swift */; };
 		D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E26284EB81C00FAF01D /* PluginPanel.swift */; };
-		D2FF07922876C2B300B97FD7 /* DebueRingLoadAutomatable.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078D2876C2B300B97FD7 /* DebueRingLoadAutomatable.h */; };
-		D2FF07932876C2B300B97FD7 /* DebueRingLoadAutomatable.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF078E2876C2B300B97FD7 /* DebueRingLoadAutomatable.m */; };
+		D2FF07922876C2B300B97FD7 /* DebugRingLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */; };
+		D2FF07932876C2B300B97FD7 /* DebugRingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */; };
 		D2FF07942876C2B300B97FD7 /* DebugCrashMocker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078F2876C2B300B97FD7 /* DebugCrashMocker.h */; };
 		D2FF07952876C2B300B97FD7 /* DebugCrashMocker.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2FF07902876C2B300B97FD7 /* DebugCrashMocker.mm */; };
 		D2FF07982876C34A00B97FD7 /* DebugRingAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF07972876C34A00B97FD7 /* DebugRingAnnotation.h */; };
-		D2FF07AB2876C5C000B97FD7 /* DebugRing-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF07AA2876C5C000B97FD7 /* DebugRing-Bridging.h */; };
+		D2FF07AB2876C5C000B97FD7 /* DebugRing.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF07AA2876C5C000B97FD7 /* DebugRing.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,12 +113,12 @@
 		D2F42E24284EB73100FAF01D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2F42E26284EB81C00FAF01D /* PluginPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPanel.swift; sourceTree = "<group>"; };
 		D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DebugRing.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D2FF078D2876C2B300B97FD7 /* DebueRingLoadAutomatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebueRingLoadAutomatable.h; sourceTree = "<group>"; };
-		D2FF078E2876C2B300B97FD7 /* DebueRingLoadAutomatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebueRingLoadAutomatable.m; sourceTree = "<group>"; };
+		D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugRingLoader.h; sourceTree = "<group>"; };
+		D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRingLoader.m; sourceTree = "<group>"; };
 		D2FF078F2876C2B300B97FD7 /* DebugCrashMocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugCrashMocker.h; sourceTree = "<group>"; };
 		D2FF07902876C2B300B97FD7 /* DebugCrashMocker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DebugCrashMocker.mm; sourceTree = "<group>"; };
 		D2FF07972876C34A00B97FD7 /* DebugRingAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRingAnnotation.h; sourceTree = "<group>"; };
-		D2FF07AA2876C5C000B97FD7 /* DebugRing-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebugRing-Bridging.h"; sourceTree = "<group>"; };
+		D2FF07AA2876C5C000B97FD7 /* DebugRing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugRing.h; sourceTree = "<group>"; };
 		D997F0053E382401F9D858E0 /* Pods_DebugRingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35A6A5AA72A707DCA578024 /* Pods-DebugRingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.release.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F956F2F6BD85AD4B4A62E5DC /* Pods_DebugRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,12 +342,12 @@
 		D2F42E0F284E995E00FAF01D /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				D2FF07AA2876C5C000B97FD7 /* DebugRing-Bridging.h */,
+				D2FF07AA2876C5C000B97FD7 /* DebugRing.h */,
 				D2FF07972876C34A00B97FD7 /* DebugRingAnnotation.h */,
 				D2FF078F2876C2B300B97FD7 /* DebugCrashMocker.h */,
 				D2FF07902876C2B300B97FD7 /* DebugCrashMocker.mm */,
-				D2FF078D2876C2B300B97FD7 /* DebueRingLoadAutomatable.h */,
-				D2FF078E2876C2B300B97FD7 /* DebueRingLoadAutomatable.m */,
+				D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */,
+				D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */,
 			);
 			path = ObjC;
 			sourceTree = "<group>";
@@ -381,8 +381,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FF07AB2876C5C000B97FD7 /* DebugRing-Bridging.h in Headers */,
-				D2FF07922876C2B300B97FD7 /* DebueRingLoadAutomatable.h in Headers */,
+				D2FF07AB2876C5C000B97FD7 /* DebugRing.h in Headers */,
+				D2FF07922876C2B300B97FD7 /* DebugRingLoader.h in Headers */,
 				D2FF07982876C34A00B97FD7 /* DebugRingAnnotation.h in Headers */,
 				D2FF07942876C2B300B97FD7 /* DebugCrashMocker.h in Headers */,
 			);
@@ -615,7 +615,7 @@
 				D29115BC284EC807000989DF /* CollectionViewController.swift in Sources */,
 				D29115A6284EC04B000989DF /* NavigationController.swift in Sources */,
 				D22590B2284F114200F1188B /* DeviceHelper.swift in Sources */,
-				D2FF07932876C2B300B97FD7 /* DebueRingLoadAutomatable.m in Sources */,
+				D2FF07932876C2B300B97FD7 /* DebugRingLoader.m in Sources */,
 				D2644EFB28658DC60065D039 /* MockCrashPlugin.swift in Sources */,
 				D27A8A992520AEAC006A6125 /* DebugController.swift in Sources */,
 				D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */,
@@ -871,7 +871,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME)-Bridging.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME).h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -921,7 +921,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME)-Bridging.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Source/ObjC/$(SWIFT_MODULE_NAME).h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;

@@ -9,7 +9,7 @@
 import UIKit
 
 public final class DebugController: NSObject {
-    
+
     lazy var window = RingWindow(frame: Screen.bounds)
     
     lazy var ring = RingViewController()
@@ -130,33 +130,30 @@ extension DebugController: RingWindowDelegate {
 
 }
 
+// MARK: Bootstrap
+
 @objc
 private extension DebugController {
+    
+    static func objcLoad() {
+        RingWindow.replaceMethods()
+        
+        NotificationCenter.default
+            .addObserver(DebugController.self,
+                         selector: #selector(onApplicationDidFinishLaunching),
+                         name: UIScene.didActivateNotification,
+                         object: nil)
+    }
+    
     static func onApplicationDidFinishLaunching(_ note: Notification) {
         logger.debug("DebugRing已启动")
         show()
-        
+
         for scene in UIApplication.shared.connectedScenes {
             if scene.activationState == .foregroundActive,
                 let windowScene = scene as? UIWindowScene {
                 shared.window.windowScene = windowScene
             }
         }
-    }
-}
-
-//MARK: - DebugRingLoader
-
-public class DebugRingLoader: NSObject, DebueRingLoadAutomatable {
-    
-    public static func objcLoad() {
-        
-        RingWindow.replaceMethods()
-        
-        NotificationCenter.default.addObserver(DebugController.self,
-                                               selector: #selector(DebugController.onApplicationDidFinishLaunching(_:)),
-                                               name: UIScene.didActivateNotification,
-                                               object: nil)
-
     }
 }
