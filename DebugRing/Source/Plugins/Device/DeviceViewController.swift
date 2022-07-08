@@ -24,7 +24,11 @@ final class DeviceViewController: CollectionViewController {
         super.viewDidAppear(animated)
         
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(onTimer(_:)),
+                                     userInfo: nil,
+                                     repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
         timer!.fire()
     }
@@ -37,10 +41,8 @@ final class DeviceViewController: CollectionViewController {
     }
     
     private func setupNavigationItems() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "复制全部",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(onPressCopyAllButton))
+        showRightBarItem(title: "复制全部",
+                         action: #selector(onPressCopyAllButton))
     }
 
     private func setupDataSource() {

@@ -21,10 +21,8 @@ final class PluginPanel: CollectionViewController {
     }
     
     private func setupNavigationItems() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "退出",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(onPressQuitButton))
+        showRightBarItem(title: "退出",
+                         action: #selector(onPressQuitButton))
     }
 
     private func setupDataSource() {
