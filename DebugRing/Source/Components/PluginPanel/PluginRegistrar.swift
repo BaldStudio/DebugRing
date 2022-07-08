@@ -17,9 +17,7 @@ struct PluginRegistrar {
                                                  ofType: "plist") {
             registerPlugins(from: plistPath, for: "DebugRing")
         }
-        registerPluginsFromMachO()
-        
-        logger.debug("已加载插件: \(self)")
+        registerPluginsFromMachO()        
     }
         
     @discardableResult

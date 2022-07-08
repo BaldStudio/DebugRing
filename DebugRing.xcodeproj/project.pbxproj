@@ -48,6 +48,7 @@
 		D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E22284EB65F00FAF01D /* UIView++.swift */; };
 		D2F42E25284EB73100FAF01D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* Utils.swift */; };
 		D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E26284EB81C00FAF01D /* PluginPanel.swift */; };
+		D2F8B47128780176008FCD13 /* UIApplication++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8B47028780176008FCD13 /* UIApplication++.swift */; };
 		D2FF07922876C2B300B97FD7 /* DebugRingLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */; };
 		D2FF07932876C2B300B97FD7 /* DebugRingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */; };
 		D2FF07942876C2B300B97FD7 /* DebugCrashMocker.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078F2876C2B300B97FD7 /* DebugCrashMocker.h */; };
@@ -114,6 +115,7 @@
 		D2F42E22284EB65F00FAF01D /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
 		D2F42E24284EB73100FAF01D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2F42E26284EB81C00FAF01D /* PluginPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPanel.swift; sourceTree = "<group>"; };
+		D2F8B47028780176008FCD13 /* UIApplication++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication++.swift"; sourceTree = "<group>"; };
 		D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DebugRing.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugRingLoader.h; sourceTree = "<group>"; };
 		D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRingLoader.m; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				D2F42E22284EB65F00FAF01D /* UIView++.swift */,
 				D2D80EA428756B810011FB46 /* Bundle++.swift */,
 				D2926AC42877D348006F8215 /* UIViewController++.swift */,
+				D2F8B47028780176008FCD13 /* UIApplication++.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				D22590E22850428600F1188B /* RingWindow.swift in Sources */,
 				D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */,
 				D2644F00286598710065D039 /* MockCrashItem.swift in Sources */,
+				D2F8B47128780176008FCD13 /* UIApplication++.swift in Sources */,
 				D22590BA284F1F5700F1188B /* ListViewItem.swift in Sources */,
 				D2644EFE28658EE00065D039 /* MockCrashViewController.swift in Sources */,
 				D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */,

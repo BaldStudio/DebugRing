@@ -9,8 +9,6 @@
 @_exported import UIKit
 @_exported import BsListKit
 
-import OSLog
-
 struct DebugRing {
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -26,7 +24,7 @@ struct DebugRing {
             print("\(timestamp) [DebugRing] 🟤 DEBUG - \(message)")
     #endif
         }
-        
+                
         func info(_ message: Any) {
     #if DEBUG
             let timestamp = DebugRing.dateFormatter.string(from: Date())
@@ -34,6 +32,19 @@ struct DebugRing {
     #endif
         }
 
+        func warning(_ message: Any) {
+    #if DEBUG
+            let timestamp = DebugRing.dateFormatter.string(from: Date())
+            print("\(timestamp) [DebugRing] ⚠️ WARNING - \(message)")
+    #endif
+        }
+        
+        func error(_ message: Any) {
+    #if DEBUG
+            let timestamp = DebugRing.dateFormatter.string(from: Date())
+            print("\(timestamp) [DebugRing] ❌ ERROR - \(message)")
+    #endif
+        }
     }
 
 }

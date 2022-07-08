@@ -9,7 +9,11 @@
 import UIKit
 
 final class PluginPanel: CollectionViewController {
-        
+    
+    var pluginRegistrar: PluginRegistrar {
+        DebugController.shared.pluginRegistrar
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,16 +38,21 @@ final class PluginPanel: CollectionViewController {
             let group = PluginGroup()
             self.collectionView.append(section: group)
             
-            let plugins = DebugController.shared.pluginRegistrar.plugins
+            let plugins = self.pluginRegistrar.plugins
             for name in plugins {
                 guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type
-                else { continue }
+                else {
+                    logger.warning("跳过无法识别的插件：\(name)")
+                    continue
+                }
                             
                 let item = PluginItem()
                 item.plugin = pluginClass.init()
                 item.cellSize = group.itemSize
                 group.append(item)
             }
+
+            logger.info("已加载插件: \(self.pluginRegistrar)")
 
             DispatchQueue.main.async {
                 self.collectionView.reloadData()

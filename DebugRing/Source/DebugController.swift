@@ -23,8 +23,10 @@ public final class DebugController: NSObject {
         window.rootViewController = ring
     }
     
+    @objc
     public static let shared = DebugController()
 
+    @objc
     public var isHidden: Bool {
         window.isHidden
     }
@@ -33,6 +35,7 @@ public final class DebugController: NSObject {
 
 //MARK: - Display
 
+@objc
 public extension DebugController {
     
     static func show() {
@@ -63,6 +66,7 @@ public extension DebugController {
 
 //MARK: - Navigation
 
+@objc
 public extension DebugController {
     
     internal static var navigator: NavigationController {
@@ -80,10 +84,7 @@ public extension DebugController {
     
     static func push(_ viewController: UIViewController) {
         if let pre = navigator.topViewController {
-            pre.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil,
-                                                                   style: .plain,
-                                                                   target: pre,
-                                                                   action: nil)
+            pre.setBackBarItem(.arrow)
         }
         
         navigator.pushViewController(viewController, animated: true)
@@ -97,6 +98,7 @@ public extension DebugController {
 
 //MARK: - Plugin
 
+@objc
 public extension DebugController {
     
     static var plugins: [String] {
@@ -146,7 +148,8 @@ private extension DebugController {
     }
     
     static func onApplicationDidFinishLaunching(_ note: Notification) {
-        logger.debug("DebugRing已启动")
+        logger.info("DebugRing已启动")
+        
         show()
 
         for scene in UIApplication.shared.connectedScenes {

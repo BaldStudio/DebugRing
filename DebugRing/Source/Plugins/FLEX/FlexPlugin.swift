@@ -18,10 +18,10 @@ final class FlexPlugin: DebugPlugin {
         FLEXManager.shared.toggleExplorer()
         
         if FLEXManager.shared.isHidden {
-            logger.debug("FLEX 【已关闭】")
+            logger.info("FLEX 【已关闭】")
         }
         else {
-            logger.debug("FLEX 【已启用】")
+            logger.info("FLEX 【已启用】")
         }
     }
 }

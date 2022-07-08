@@ -20,11 +20,11 @@ final class StatisticsPlugin: DebugPlugin {
         
         if statsView.isHidden {
             DebugController.removeTouchReceiver(statsView)
-            logger.debug("性能监控 【已关闭】")
+            logger.info("性能监控 【已关闭】")
         }
         else {
             DebugController.addTouchReceiver(statsView)
-            logger.debug("性能监控 【已启用】")
+            logger.info("性能监控 【已启用】")
         }
     }
 }

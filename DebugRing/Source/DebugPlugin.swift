@@ -10,6 +10,7 @@ import UIKit
 
 public typealias DebugPlugin = DebugPluginRepresentable & NSObject
 
+@objc
 public protocol DebugPluginRepresentable: AnyObject {
     
     var name: String { get }
