@@ -14,6 +14,7 @@ final class StatisticsPlugin: DebugPlugin {
 
     let name = "性能监控"
     let icon = UIImage(named: "stats", in: .debugRing, with: nil)
+    let instruction = "性能浮层的开关，显示FPS，CPU，内存的信息"
 
     func onDidSelect() {
         statsView.toggle()

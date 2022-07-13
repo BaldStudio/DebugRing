@@ -43,6 +43,8 @@
 		D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */; };
 		D2D80EA528756B810011FB46 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EA428756B810011FB46 /* Bundle++.swift */; };
 		D2D80EAB28757B4C0011FB46 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */; };
+		D2EB0A99287EC41D002FC0C9 /* AnyOpenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0A98287EC41D002FC0C9 /* AnyOpenPlugin.swift */; };
+		D2EB0A9B287EC4A9002FC0C9 /* AnyOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0A9A287EC4A9002FC0C9 /* AnyOpenViewController.swift */; };
 		D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* RingView.swift */; };
 		D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1F284EA7B800FAF01D /* RingViewController.swift */; };
 		D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E22284EB65F00FAF01D /* UIView++.swift */; };
@@ -110,6 +112,8 @@
 		D2D49FD1285154D4006B5448 /* StatisticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsHelper.swift; sourceTree = "<group>"; };
 		D2D80EA428756B810011FB46 /* Bundle++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
 		D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		D2EB0A98287EC41D002FC0C9 /* AnyOpenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOpenPlugin.swift; sourceTree = "<group>"; };
+		D2EB0A9A287EC4A9002FC0C9 /* AnyOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOpenViewController.swift; sourceTree = "<group>"; };
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
 		D2F42E1D284EA7AD00FAF01D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		D2F42E1F284EA7B800FAF01D /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 		D29115CB284EFF4A000989DF /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				D2EB0A97287EC40C002FC0C9 /* AnyOpen */,
 				D2644EF928658DAA0065D039 /* MockCrash */,
 				D29115DE284F0ABB000989DF /* Statistics */,
 				D29115DB284F0A0E000989DF /* Device */,
@@ -343,6 +348,15 @@
 				D2D80EAA28757B4C0011FB46 /* SpinnerViewController.swift */,
 			);
 			path = Spinner;
+			sourceTree = "<group>";
+		};
+		D2EB0A97287EC40C002FC0C9 /* AnyOpen */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB0A98287EC41D002FC0C9 /* AnyOpenPlugin.swift */,
+				D2EB0A9A287EC4A9002FC0C9 /* AnyOpenViewController.swift */,
+			);
+			path = AnyOpen;
 			sourceTree = "<group>";
 		};
 		D2F42E0F284E995E00FAF01D /* ObjC */ = {
@@ -607,6 +621,7 @@
 				D2644EFE28658EE00065D039 /* MockCrashViewController.swift in Sources */,
 				D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */,
 				D22590AE284F112C00F1188B /* DeviceItem.swift in Sources */,
+				D2EB0A99287EC41D002FC0C9 /* AnyOpenPlugin.swift in Sources */,
 				D2F42E23284EB65F00FAF01D /* UIView++.swift in Sources */,
 				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
@@ -618,6 +633,7 @@
 				D2D80EAB28757B4C0011FB46 /* SpinnerViewController.swift in Sources */,
 				D22590F02850C50A00F1188B /* CollectionViewSection.swift in Sources */,
 				D2FF07952876C2B300B97FD7 /* DebugCrashMocker.mm in Sources */,
+				D2EB0A9B287EC4A9002FC0C9 /* AnyOpenViewController.swift in Sources */,
 				D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */,
 				D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */,
 				D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */,

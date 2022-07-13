@@ -6,5 +6,6 @@
 	<string>StatisticsPlugin</string>
 	<string>DevicePlugin</string>
 	<string>MockCrashPlugin</string>
+	<string>AnyOpenPlugin</string>
 </array>
 </plist>

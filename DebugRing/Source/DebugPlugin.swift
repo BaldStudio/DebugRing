@@ -15,7 +15,10 @@ public protocol DebugPluginRepresentable: AnyObject {
     
     var name: String { get }
     var icon: UIImage? { get }
-        
+    
+    @objc optional
+    var instruction: String { get }
+    
     func onDidSelect()
 }
 
@@ -24,6 +27,8 @@ private extension DebugPluginRepresentable {
     var icon: UIImage? {
         UIImage(systemName: "circle")
     }
+    
+    var instruction: String { "" }
     
     func onDidSelect() {}
 }

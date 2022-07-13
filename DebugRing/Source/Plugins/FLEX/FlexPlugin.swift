@@ -13,7 +13,8 @@ final class FlexPlugin: DebugPlugin {
     
     let name = "FLEX"
     let icon = UIImage(named: "flex", in: .debugRing, with: nil)
-        
+    let instruction = "FLEX工具的开关"
+    
     func onDidSelect() {
         FLEXManager.shared.toggleExplorer()
         
