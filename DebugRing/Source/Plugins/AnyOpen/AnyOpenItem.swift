@@ -1,14 +1,14 @@
 //
-//  MockCrashItem.swift
+//  AnyOpenItem.swift
 //  DebugRing
 //
-//  Created by crzorz on 2022/6/24.
+//  Created by crzorz on 2022/7/16.
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
 import UIKit
 
-final class MockCrashItem: ListViewItem {
+final class AnyOpenItem: ListViewItem {
     
     var title = ""
     var action: (() -> Void)?
@@ -17,7 +17,7 @@ final class MockCrashItem: ListViewItem {
         self.init()
         self.title = title
     }
-    
+        
     override init() {
         super.init()
         cellClass = ListViewNormalCell.self
@@ -31,4 +31,5 @@ final class MockCrashItem: ListViewItem {
     override func didSelectItem(at indexPath: IndexPath) {
         action?()
     }
+    
 }

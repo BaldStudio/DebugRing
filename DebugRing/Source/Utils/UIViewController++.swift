@@ -33,4 +33,11 @@ extension UIViewController {
                                                   action: action)
     }
     
+    func showRightBarItem(style: UIBarButtonItem.SystemItem, action: Selector) {
+        navigationItem
+            .rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: style,
+                                                  target: self,
+                                                  action: action)
+    }
+
 }

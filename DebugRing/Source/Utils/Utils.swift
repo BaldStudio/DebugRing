@@ -63,7 +63,8 @@ let logger = DebugRing.Logger()
 
 struct Screen {
     static let bounds = UIScreen.main.bounds
-    static let width: CGFloat = bounds.width
-    static let height: CGFloat = bounds.height
-
+    static let size = bounds.size
+    static let width = bounds.width
+    static let height = bounds.height
+    static let scale = UIScreen.main.scale
 }

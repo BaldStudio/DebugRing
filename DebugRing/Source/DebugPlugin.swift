@@ -22,13 +22,11 @@ public protocol DebugPluginRepresentable: AnyObject {
     func onDidSelect()
 }
 
-private extension DebugPluginRepresentable {
+extension DebugPluginRepresentable {
     
     var icon: UIImage? {
         UIImage(systemName: "circle")
     }
-    
-    var instruction: String { "" }
-    
+        
     func onDidSelect() {}
 }

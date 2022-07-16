@@ -142,11 +142,15 @@ public:
 
 - (void)test_NSException_dic {
     id source = nil;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wignored-attributes"
+#pragma clang diagnostic ignored "-Wunused-variable"
     __used NSDictionary *dic = @{
-                                 @"file": source,
-                                 @"line": @"12",
-                                 @"column":@"co"
-                          };
+      @"file": source,
+      @"line": @"12",
+      @"column":@"co"
+    };
+#pragma clang diagnostic pop
 }
 
 - (void)test_CPPException_string {
@@ -224,7 +228,10 @@ public:
 - (void)test_OOM __attribute__ ((optnone)) {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         while (true) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
             void *a = calloc(1, 1 * 1024 * 1024);
+#pragma clang diagnostic pop
             sleep(0.2);
         }
     });
@@ -281,8 +288,11 @@ static void test1() __attribute__ ((optnone)) {
     block = nil;
     obj = nil;
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
     NSArray *arr = @[nextBlock];
-    
+#pragma clang diagnostic pop
+
     NSLog(@"obj: %@", obj);
 }
 

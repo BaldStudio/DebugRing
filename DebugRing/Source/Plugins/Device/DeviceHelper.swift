@@ -39,8 +39,8 @@ struct DeviceHelper {
     
     /// 屏幕逻辑尺寸
     static var logicalScreenSize: String {
-        let size = UIScreen.main.bounds.size
-        let scale = UIScreen.main.scale
+        let size = Screen.size
+        let scale = Screen.scale
 
         let width = Int(size.width * scale)
         let height = Int(size.height * scale)

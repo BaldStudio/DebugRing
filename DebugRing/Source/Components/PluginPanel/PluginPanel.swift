@@ -19,16 +19,12 @@ final class PluginPanel: CollectionViewController {
         
         title = "Debug Ring"
         
-        setupNavigationItems()
+        showRightBarItem(title: "退出",
+                         action: #selector(onQuit))
         
         setupDataSource()
     }
     
-    private func setupNavigationItems() {
-        showRightBarItem(title: "退出",
-                         action: #selector(onPressQuitButton))
-    }
-
     private func setupDataSource() {
         
         let spinner = SpinnerViewController()
@@ -65,7 +61,7 @@ final class PluginPanel: CollectionViewController {
 @objc
 private extension PluginPanel {
     
-    func onPressQuitButton() {
+    func onQuit() {
         DebugController.dismissViewController()
     }
 }

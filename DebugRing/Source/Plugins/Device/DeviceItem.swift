@@ -57,6 +57,7 @@ private final class DeviceItemCell: ListViewCell {
 
     override func commonInit() {
         super.commonInit()
+        
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.spacing = 16
         stackView.axis = .horizontal

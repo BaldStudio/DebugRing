@@ -25,12 +25,13 @@ class ListViewCell: CollectioViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .separator
         view.isUserInteractionEnabled = false
+        view.layer.zPosition = 10;
         return view
     }()
     
     override func commonInit() {
         super.commonInit()
-        
+                
         contentView.addSubview(separator)
         NSLayoutConstraint.activate([
             separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
@@ -41,12 +42,49 @@ class ListViewCell: CollectioViewCell {
         ])
 
     }
+}
+
+//MARK: - Normal Cell
+
+class ListViewNormalCell: ListViewCell {
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 18)
+        label.textColor = .black
+        return label
+    }()
+    
+    lazy var arrow: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "chevron.right")
+        imageView.contentMode = .center
+        return imageView
+    }()
+    
+    override func commonInit() {
+        super.commonInit()
         
-        if !separator.isHidden {
-            contentView.bringSubviewToFront(separator)
-        }
+        contentView.addSubview(arrow)
+        NSLayoutConstraint.activate([
+            arrow.rightAnchor.constraint(equalTo: contentView.rightAnchor,
+                                         constant: -8),
+            arrow.topAnchor.constraint(equalTo: contentView.topAnchor),
+            arrow.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            arrow.widthAnchor.constraint(equalToConstant: 22)
+        ])
+        
+        contentView.addSubview(titleLabel)
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor,
+                                             constant: 16),
+            titleLabel.rightAnchor.constraint(equalTo: arrow.leftAnchor,
+                                              constant: -16)
+        ])
     }
 }

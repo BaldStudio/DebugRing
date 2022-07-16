@@ -14,8 +14,9 @@ final class DeviceViewController: CollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
-        setupNavigationItems()
+                             
+        showRightBarItem(title: "复制",
+                         action: #selector(onCopyAll))
         
         setupDataSource()
     }
@@ -40,11 +41,6 @@ final class DeviceViewController: CollectionViewController {
         timer = nil
     }
     
-    private func setupNavigationItems() {
-        showRightBarItem(title: "复制全部",
-                         action: #selector(onPressCopyAllButton))
-    }
-
     private func setupDataSource() {
         for cate in categories {
             let section = CollectionViewSection(cate)
@@ -62,7 +58,7 @@ final class DeviceViewController: CollectionViewController {
 @objc
 private extension DeviceViewController {
     
-    func onPressCopyAllButton() {
+    func onCopyAll() {
         
         var report: [String] = []
         for cate in categories {
