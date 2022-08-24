@@ -8,7 +8,7 @@ target 'DebugRing' do
   
   pod 'FLEX', '4.7.0'
   
-  pod 'BsListKit/CollectionView', :git => 'https://github.com/BaldStudio/BsListKit.git'
+  pod 'BsUIKit/CollectionView', :git => 'git@github.com:BaldStudio/BsUIKit.git'
 
 end
 
