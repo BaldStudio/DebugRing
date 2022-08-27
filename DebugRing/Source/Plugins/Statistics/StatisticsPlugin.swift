@@ -13,7 +13,7 @@ final class StatisticsPlugin: DebugPlugin {
     private lazy var statsView = StatisticsView.shared
 
     let name = "性能监控"
-    let icon = UIImage(named: "stats", in: .debugRing, with: nil)
+    let icon = UIImage(debug: "stats")
     let instruction = "性能浮层的开关，显示FPS，CPU，内存的信息"
 
     func onDidSelect() {

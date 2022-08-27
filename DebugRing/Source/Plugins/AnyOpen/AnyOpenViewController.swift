@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BsListKit
+import BsUIKit
 
 final class AnyOpenViewController: CollectionViewController {
         

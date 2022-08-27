@@ -6,65 +6,33 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-@_exported import UIKit
-@_exported import BsListKit
+import UIKit
+import BsFoundation
 
-struct DebugRing {
-    static let dateFormatter: DateFormatter = {
+//MARK: - Logger
+
+let logger: BsLogger = {
+    let logger = BsLogger(subsystem: "com.bald-studio.DebugRing",
+                          category: "DebugRing")
+    logger.level = .none
+    return logger
+}()
+
+extension DateFormatter {
+    static let common: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
         return formatter
     }()
-    
-    struct Logger {
-        
-        func debug(_ message: Any) {
-    #if DEBUG
-            let timestamp = DebugRing.dateFormatter.string(from: Date())
-            print("\(timestamp) [DebugRing] 🟤 DEBUG - \(message)")
-    #endif
-        }
-                
-        func info(_ message: Any) {
-    #if DEBUG
-            let timestamp = DebugRing.dateFormatter.string(from: Date())
-            print("\(timestamp) [DebugRing] 🟢 INFO - \(message)")
-    #endif
-        }
+}
 
-        func warning(_ message: Any) {
-    #if DEBUG
-            let timestamp = DebugRing.dateFormatter.string(from: Date())
-            print("\(timestamp) [DebugRing] ⚠️ WARNING - \(message)")
-    #endif
-        }
-        
-        func error(_ message: Any) {
-    #if DEBUG
-            let timestamp = DebugRing.dateFormatter.string(from: Date())
-            print("\(timestamp) [DebugRing] ❌ ERROR - \(message)")
-    #endif
-        }
+extension Bundle {
+    static let debug = Bundle(path: main.path(forResource: "DebugRing",
+                                              ofType: "bundle")!)!
+}
+
+extension UIImage {
+    convenience init?(debug name: String) {
+        self.init(named: name, in: .debug, with: nil)
     }
-
-}
-
-//MARK: - Impact
-
-func impactFeedback(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
-    let generator = UIImpactFeedbackGenerator(style: style)
-    generator.prepare()
-    generator.impactOccurred()
-}
-
-//MARK: - Logger
-
-let logger = DebugRing.Logger()
-
-struct Screen {
-    static let bounds = UIScreen.main.bounds
-    static let size = bounds.size
-    static let width = bounds.width
-    static let height = bounds.height
-    static let scale = UIScreen.main.scale
 }

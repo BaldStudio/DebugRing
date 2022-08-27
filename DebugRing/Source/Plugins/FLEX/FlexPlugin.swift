@@ -12,7 +12,7 @@ import FLEX
 final class FlexPlugin: DebugPlugin {
     
     let name = "FLEX"
-    let icon = UIImage(named: "flex", in: .debugRing, with: nil)
+    let icon = UIImage(debug: "flex")
     let instruction = "FLEX工具的开关"
     
     func onDidSelect() {

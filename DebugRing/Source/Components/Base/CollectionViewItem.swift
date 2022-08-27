@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BsUIKit
 
 class CollectionViewItem: BsCollectionViewItem {
     
@@ -70,7 +71,7 @@ class CollectioViewCell: UICollectionViewCell {
     func commonInit() {
                 
         contentView.addSubview(highlightedView)
-        highlightedView.edgesEqualToSuperview()
+        highlightedView.bs.edgesEqualToSuperview()
 
     }
 

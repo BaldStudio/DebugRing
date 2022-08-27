@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BsUIKit
 
 class CollectionViewSection: BsCollectionViewSection {
     

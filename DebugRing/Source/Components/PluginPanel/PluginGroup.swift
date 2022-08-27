@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BsUIKit
 
 final class PluginGroup: BsCollectionViewSection {
     

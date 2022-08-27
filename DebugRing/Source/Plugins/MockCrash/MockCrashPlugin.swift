@@ -12,7 +12,7 @@ import UIKit
 final class MockCrashPlugin: DebugPlugin {
     
     let name = "模拟Crash"
-    let icon = UIImage(named: "crash.mock", in: .debugRing, with: nil)
+    let icon = UIImage(debug: "crash.mock")
     let instruction = "模拟各种常见的crash场景"
 
     func onDidSelect() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BsFoundation
 
 protocol RingWindowDelegate: AnyObject {
     func shouldHandleTouch(at point: CGPoint) -> Bool
@@ -38,7 +39,7 @@ final class RingWindow: UIWindow {
     }
 
     override func makeKey() {
-        let window = UIApplication.appKeyWindow
+        let window = BsAppKeyWindow
         if let ringWindow = window as? RingWindow {
             previousKeyWindow = ringWindow.previousKeyWindow
         }

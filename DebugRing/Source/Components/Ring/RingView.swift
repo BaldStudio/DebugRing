@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BsFoundation
+import BsUIKit
 
 final class RingView: UIView {
     
@@ -60,7 +62,7 @@ private extension RingView {
     
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)
-        center = CGPoint(x: center.x + transPoint.x, y: center.y + transPoint.y)
+        center += transPoint
         sender.setTranslation(.zero, in: superview)
 
         if sender.state == .began {
@@ -99,7 +101,7 @@ private extension RingView {
     
     func onTap(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            impactFeedback(.medium)
+            HapticEngine.driven(.medium)
             cancelChangeRingColor()
             willChangeRingColor()
             
@@ -110,7 +112,7 @@ private extension RingView {
     @objc
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            impactFeedback(.heavy)
+            HapticEngine.driven(.heavy)
             DebugController.toggle()
         }
     }

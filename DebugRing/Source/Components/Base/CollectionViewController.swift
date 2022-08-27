@@ -7,23 +7,8 @@
 //
 
 import UIKit
+import BsUIKit
 
-class CollectionViewController: UIViewController, UICollectionViewDelegate {
-        
-    deinit {
-        logger.debug("\(self.classForCoder) -> deinit 🔥")
-    }
-    
-    var collectionView: BsCollectionView!
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        collectionView = BsCollectionView(delegate: self)
-        collectionView.alwaysBounceVertical = true
-        view.addSubview(collectionView)
-        collectionView.edgesEqualToSuperview()
-    }
-    
-
+class CollectionViewController: BsCollectionViewController {
+                
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import BsUIKit
+import BsFoundation
 
 final class StatisticsView: UIView {
     private lazy var statsHelper = StatisticsHelper()
@@ -79,8 +81,8 @@ final class StatisticsView: UIView {
     private func setupSubviews() {
         
         addSubview(stackView)
-        stackView.edgesEqual(to: self,
-                             with: UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8))
+        stackView.bs.edgesEqual(to: self,
+                                with: UIEdgeInsets(horizontal: 8, vertical: 0))
 
     }
     
@@ -107,7 +109,7 @@ private extension StatisticsView {
     
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)
-        center = CGPoint(x: center.x + transPoint.x, y: center.y + transPoint.y)
+        center += transPoint
         sender.setTranslation(.zero, in: superview)
 
         if sender.state == .ended {
@@ -142,7 +144,7 @@ private extension StatisticsView {
             
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            impactFeedback(.heavy)
+            HapticEngine.driven(.heavy)
             toggle()
         }
     }

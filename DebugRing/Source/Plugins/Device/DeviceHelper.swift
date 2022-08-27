@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreTelephony
+import BsUIKit
 
 struct DeviceInfo {
     let name: String
@@ -321,7 +322,7 @@ struct DeviceHelper {
               let date = attrs[.creationDate] as? Date
         else { return unknown }
         
-        return DebugRing.dateFormatter.string(from: date)
+        return DateFormatter.common.string(from: date)
     }
 
     /// 是否是模拟器

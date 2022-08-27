@@ -11,7 +11,7 @@ import UIKit
 final class AnyOpenPlugin: DebugPlugin {
     
     let name = "任意门"
-    let icon = UIImage(named: "door.dimension", in: .debugRing, with: nil)
+    let icon = UIImage(debug: "door.dimension")
     let instruction = "通过scheme打开任意页面"
 
     func onDidSelect() {
