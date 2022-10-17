@@ -9,10 +9,9 @@
 #ifndef DebugRingAnnotation_h
 #define DebugRingAnnotation_h
 
-struct DebugRingPluginData {
+typedef struct DebugRingPluginData {
     char *name;
-};
-typedef struct DebugRingPluginData DebugRingPluginData;
+} DebugRingPluginData;
 
 #define DEBUG_RING_SEG     "__DEBUG_RING"
 #define DEBUG_RING_SECT    "__plugin"

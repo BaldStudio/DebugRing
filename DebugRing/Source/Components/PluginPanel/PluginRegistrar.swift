@@ -6,7 +6,7 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import Foundation
+import BsFoundation
 
 struct PluginRegistrar {
 
@@ -44,7 +44,8 @@ struct PluginRegistrar {
 
     @discardableResult
     mutating func registerPluginsFromMachO() -> Bool {
-        var data: [PluginData] = MachO.fetch(seg: .debugRing, sect: .plugin)
+        var data: [PluginData] = fetchMachOData(segment: .debug,
+                                                section: .plugin)
         data.sort { $0.name > $1.name }
         for info in data {
             plugins.append(info.name)

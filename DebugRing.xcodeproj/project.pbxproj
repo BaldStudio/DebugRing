@@ -34,7 +34,6 @@
 		D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BD284EC9A1000989DF /* PluginGroup.swift */; };
 		D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115BF284EC9A9000989DF /* PluginItem.swift */; };
 		D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115C1284ECAE9000989DF /* PluginRegistrar.swift */; };
-		D29115C6284EED77000989DF /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115C5284EED77000989DF /* MachO.swift */; };
 		D29115D6284F013C000989DF /* FlexPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115D5284F013C000989DF /* FlexPlugin.swift */; };
 		D29115DD284F0A37000989DF /* DevicePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DC284F0A37000989DF /* DevicePlugin.swift */; };
 		D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */; };
@@ -101,7 +100,6 @@
 		D29115BF284EC9A9000989DF /* PluginItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginItem.swift; sourceTree = "<group>"; };
 		D29115C1284ECAE9000989DF /* PluginRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginRegistrar.swift; sourceTree = "<group>"; };
 		D29115C3284EDB67000989DF /* DebugPlugins.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DebugPlugins.plist; sourceTree = "<group>"; };
-		D29115C5284EED77000989DF /* MachO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachO.swift; sourceTree = "<group>"; };
 		D29115D5284F013C000989DF /* FlexPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexPlugin.swift; sourceTree = "<group>"; };
 		D29115DC284F0A37000989DF /* DevicePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlugin.swift; sourceTree = "<group>"; };
 		D29115DF284F0AE8000989DF /* StatisticsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPlugin.swift; sourceTree = "<group>"; };
@@ -371,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				D2F42E24284EB73100FAF01D /* Utils.swift */,
-				D29115C5284EED77000989DF /* MachO.swift */,
 				D2926AC42877D348006F8215 /* UIViewController++.swift */,
 			);
 			path = Utils;
@@ -612,7 +609,6 @@
 				D29115C0284EC9A9000989DF /* PluginItem.swift in Sources */,
 				D22590AE284F112C00F1188B /* DeviceItem.swift in Sources */,
 				D2EB0A99287EC41D002FC0C9 /* AnyOpenPlugin.swift in Sources */,
-				D29115C6284EED77000989DF /* MachO.swift in Sources */,
 				D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */,
 				D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */,
 				D29115BE284EC9A1000989DF /* PluginGroup.swift in Sources */,
