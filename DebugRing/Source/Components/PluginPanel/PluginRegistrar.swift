@@ -8,7 +8,7 @@
 
 import BsFoundation
 
-struct PluginRegistrar {
+final class PluginRegistrar {
 
     var plugins: [String] = []
     
@@ -17,11 +17,11 @@ struct PluginRegistrar {
                                              ofType: "plist") {
             registerPlugins(from: plistPath, for: "DebugRing")
         }
-        registerPluginsFromMachO()        
+        registerPluginsFromMachO()
     }
         
     @discardableResult
-    mutating func registerPlugin(_ name: String) -> Bool {
+    func registerPlugin(_ name: String) -> Bool {
         if plugins.contains(name) {
             return false
         }
@@ -31,8 +31,8 @@ struct PluginRegistrar {
     }
     
     @discardableResult
-    mutating func registerPlugins(from plistPath: String,
-                                  for bundleName: String) -> Bool {
+    func registerPlugins(from plistPath: String,
+                         for bundleName: String) -> Bool {
         guard let pluginsLoaded = NSArray(contentsOfFile: plistPath) as? [String]
         else { return false }
         
@@ -43,9 +43,9 @@ struct PluginRegistrar {
     }
 
     @discardableResult
-    mutating func registerPluginsFromMachO() -> Bool {
-        var data: [PluginData] = fetchMachOData(segment: .debug,
-                                                section: .plugin)
+    func registerPluginsFromMachO() -> Bool {
+        var data: [PluginData] = loadMachOData(segment: .debug,
+                                               section: .plugin)
         data.sort { $0.name > $1.name }
         for info in data {
             plugins.append(info.name)
@@ -53,7 +53,7 @@ struct PluginRegistrar {
         return true
     }
 
-    mutating func unregisterPlugin(_ name: String) {
+    func unregisterPlugin(_ name: String) {
         plugins.removeAll {
             $0 == name
         }
@@ -63,7 +63,8 @@ struct PluginRegistrar {
 extension PluginRegistrar: CustomStringConvertible {
     
     var description: String {
-        if let data = try? JSONSerialization.data(withJSONObject: plugins, options: [.fragmentsAllowed, .prettyPrinted]),
+        if let data = try? JSONSerialization.data(withJSONObject: plugins,
+                                                  options: [.fragmentsAllowed, .prettyPrinted]),
            let json = String(data: data, encoding: .utf8) {
             return json
         }

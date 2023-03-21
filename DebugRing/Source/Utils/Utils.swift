@@ -57,10 +57,10 @@ struct PluginData: MachODataConvertible {
 }
 
 extension MachOSegment {
-    static let debug = Self(rawValue: DEBUG_RING_SEG)
+    static let debug = MachOSegment(name: DEBUG_RING_SEG)
 }
 
 extension MachOSection {
-    static let plugin = Self(rawValue: DEBUG_RING_SECT)
+    static let plugin = MachOSection(name: DEBUG_RING_SECT)
 }
 
