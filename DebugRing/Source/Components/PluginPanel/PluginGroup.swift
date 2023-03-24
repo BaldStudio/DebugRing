@@ -17,7 +17,7 @@ final class PluginGroup: BsCollectionViewSection {
     override init() {
         super.init()
         
-        insets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        insets = UIEdgeInsets(all: 8)
         minimumLineSpacing = 8
         minimumInteritemSpacing = 8
         

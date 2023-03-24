@@ -10,5 +10,8 @@ import UIKit
 import BsUIKit
 
 class CollectionViewController: BsCollectionViewController {
-                
+    override func commonInit() {
+        super.commonInit()
+        collectionView.backgroundColor = .white
+    }
 }
