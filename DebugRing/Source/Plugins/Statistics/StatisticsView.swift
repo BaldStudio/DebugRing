@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import BsUIKit
-import BsFoundation
 
 final class StatisticsView: UIView {
     private lazy var statsHelper = StatisticsHelper()
@@ -81,8 +79,8 @@ final class StatisticsView: UIView {
     private func setupSubviews() {
         
         addSubview(stackView)
-        stackView.bs.edgesEqual(to: self,
-                                with: UIEdgeInsets(horizontal: 8, vertical: 0))
+        stackView.edgesEqual(to: self,
+                             with: UIEdgeInsets(horizontal: 8, vertical: 0))
 
     }
     
@@ -144,7 +142,7 @@ private extension StatisticsView {
             
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            HapticEngine.driven(.heavy)
+            haptic(.heavy)
             toggle()
         }
     }

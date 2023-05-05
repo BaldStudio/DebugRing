@@ -43,7 +43,7 @@ final class DeviceViewController: CollectionViewController {
     
     private func setupDataSource() {
         for cate in categories {
-            let section = CollectionViewSection(cate)
+            let section = CollectionViewDefaultSection(cate)
             collectionView.append(section: section)
             
             let infos = details[cate]!

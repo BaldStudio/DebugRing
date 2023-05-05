@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import BsUIKit
 
-class ListViewItem: CollectionViewItem {
+class ListViewItem: CollectionViewHighlightedItem {
     
     override init() {
         super.init()
@@ -19,7 +18,7 @@ class ListViewItem: CollectionViewItem {
     }
 }
 
-class ListViewCell: CollectioViewCell {
+class ListViewCell: CollectioViewHighlightedCell {
     
     lazy var separator: UIView = {
         let view = UIView()

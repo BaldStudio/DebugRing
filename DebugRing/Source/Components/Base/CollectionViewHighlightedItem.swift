@@ -1,5 +1,5 @@
 //
-//  CollectionViewItem.swift
+//  CollectionViewHighlightedItem.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/7.
@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import BsUIKit
 
-class CollectionViewItem: BsCollectionViewItem {
+class CollectionViewHighlightedItem: CollectionViewItem {
     
     override init() {
         super.init()
          
-        cellClass = CollectioViewCell.self
+        cellClass = CollectioViewHighlightedCell.self
     }
     
     override func didHighlightItem(at indexPath: IndexPath) {
         
-        guard let cell = cell as? CollectioViewCell else { return }
+        guard let cell = cell as? CollectioViewHighlightedCell else { return }
         
         cell.highlightedView.isHidden = false
         cell.highlightedView.alpha = 0
@@ -34,7 +33,7 @@ class CollectionViewItem: BsCollectionViewItem {
     
     override func didUnhighlightItem(at indexPath: IndexPath) {
         
-        guard let cell = cell as? CollectioViewCell else { return }
+        guard let cell = cell as? CollectioViewHighlightedCell else { return }
         
         UIView.animate(withDuration: 0.1,
                        delay: 0,
@@ -47,7 +46,7 @@ class CollectionViewItem: BsCollectionViewItem {
 
 }
 
-class CollectioViewCell: UICollectionViewCell {
+class CollectioViewHighlightedCell: UICollectionViewCell {
     
     lazy var highlightedView: UIView = {
         let view = UIView()
@@ -71,7 +70,7 @@ class CollectioViewCell: UICollectionViewCell {
     func commonInit() {
                 
         contentView.addSubview(highlightedView)
-        highlightedView.bs.edgesEqualToSuperview()
+        highlightedView.edgesEqualToSuperview()
 
     }
 

@@ -1,5 +1,5 @@
 //
-//  CollectionViewSection.swift
+//  CollectionViewDefaultSection.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/8.
@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import BsUIKit
 
-class CollectionViewSection: BsCollectionViewSection {
+class CollectionViewDefaultSection: CollectionViewSection {
     
     var title = ""
     
     override init() {
         super.init()
         
-        headerClass = CollectionViewSectionHeader.self
+        headerClass = CollectionViewDefaultSectionHeader.self
         
         headerSize = CGSize(width: Screen.width, height: 54)
         footerSize = CGSize(width: Screen.width, height: 24)
@@ -29,12 +28,12 @@ class CollectionViewSection: BsCollectionViewSection {
     
     override func update(header: UICollectionReusableView,
                          at indexPath: IndexPath) {
-        let header = header as! CollectionViewSectionHeader
+        let header = header as! CollectionViewDefaultSectionHeader
         header.titleLabel.text = title
     }
 }
 
-class CollectionViewSectionHeader: UICollectionReusableView {
+class CollectionViewDefaultSectionHeader: UICollectionReusableView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()

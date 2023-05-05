@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PluginItem: CollectionViewItem {
+final class PluginItem: CollectionViewHighlightedItem {
     
     var plugin: DebugPlugin!
     
@@ -30,7 +30,7 @@ final class PluginItem: CollectionViewItem {
     }
 }
 
-private class PluginItemCell: CollectioViewCell {
+private class PluginItemCell: CollectioViewHighlightedCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

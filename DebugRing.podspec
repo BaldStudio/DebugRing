@@ -21,8 +21,6 @@ Pod::Spec.new do |s|
       ]
   }
   
-  s.dependency 'BsFoundation'
-  s.dependency 'BsUIKit'
   s.dependency 'FLEX'
   
 end

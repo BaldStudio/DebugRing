@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BsUIKit
 
 public final class DebugController: NSObject {
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BsUIKit
 
 final class AnyOpenViewController: CollectionViewController {
         
@@ -21,7 +20,7 @@ final class AnyOpenViewController: CollectionViewController {
     }
     
     private func setupDataSource() {
-        let section = BsCollectionViewSection()
+        let section = CollectionViewDefaultSection()
         collectionView.append(section: section)
         
         let item = AnyOpenItem()

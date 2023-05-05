@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import BsUIKit
 
-final class PluginGroup: BsCollectionViewSection {
+final class PluginGroup: CollectionViewSection {
     
     private let numberOfRow = 4
     private(set) var itemSize: CGSize = .zero

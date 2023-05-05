@@ -6,7 +6,7 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import BsFoundation
+import Foundation
 
 final class PluginRegistrar {
 

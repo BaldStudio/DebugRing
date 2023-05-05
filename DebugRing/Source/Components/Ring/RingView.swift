@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import BsFoundation
-import BsUIKit
 
 final class RingView: UIView {
     
@@ -101,7 +99,7 @@ private extension RingView {
     
     func onTap(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            HapticEngine.driven(.medium)
+            haptic(.medium)
             cancelChangeRingColor()
             willChangeRingColor()
             
@@ -112,7 +110,7 @@ private extension RingView {
     @objc
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            HapticEngine.driven(.heavy)
+            haptic(.heavy)
             DebugController.toggle()
         }
     }

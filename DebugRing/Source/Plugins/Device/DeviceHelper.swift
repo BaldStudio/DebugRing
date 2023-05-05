@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreTelephony
-import BsUIKit
 
 struct DeviceInfo {
     let name: String

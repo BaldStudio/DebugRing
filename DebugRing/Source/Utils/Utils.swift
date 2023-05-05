@@ -7,40 +7,23 @@
 //
 
 import UIKit
-import BsFoundation
 
 //MARK: - Logger
 
-let logger: BsLogger = {
-    let logger = BsLogger(subsystem: "com.bald-studio.DebugRing",
-                          category: "DebugRing")
+let logger: Logger = {
+    let logger = Logger()
     logger.level = .none
     return logger
 }()
 
-//MARK: - DateFormatter
+//MARK: - Screen Size
 
-extension DateFormatter {
-    static let common: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
-        return formatter
-    }()
-}
-
-//MARK: - Bundle
-
-extension Bundle {
-    static let debug = Bundle(path: main.path(forResource: "DebugRing",
-                                              ofType: "bundle")!)!
-}
-
-//MARK: - UIImage
-
-extension UIImage {
-    convenience init?(debug name: String) {
-        self.init(named: name, in: .debug, with: nil)
-    }
+struct Screen {
+    static let bounds = UIScreen.main.bounds
+    static let size = bounds.size
+    static let width = bounds.width
+    static let height = bounds.height
+    static let scale = UIScreen.main.scale
 }
 
 //MARK: - MachO
@@ -64,3 +47,10 @@ extension MachOSection {
     static let plugin = MachOSection(name: DEBUG_RING_SECT)
 }
 
+//MARK: - Haptic
+
+func haptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
+    let gen = UIImpactFeedbackGenerator(style: style)
+    gen.prepare()
+    gen.impactOccurred()
+}

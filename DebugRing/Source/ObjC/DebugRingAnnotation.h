@@ -16,11 +16,11 @@ typedef struct DebugRingPluginData {
 #define DEBUG_RING_SEG     "__DEBUG_RING"
 #define DEBUG_RING_SECT    "__plugin"
 
-#define debug_ring_interface(name) \
-debug_ring_plugin_annotation(name); \
+#define DEBUG_RING_INTERFACE(name) \
+DEBUG_RING_PLUGIN_ANNOTATION(name); \
 @interface name
 
-#define debug_ring_plugin_annotation(_name_) \
+#define DEBUG_RING_PLUGIN_ANNOTATION(_name_) \
 __attribute((used, section(DEBUG_RING_SEG "," DEBUG_RING_SECT))) \
 static const DebugRingPluginData __debug_ring_##_name_##_plugin = { \
     .name = #_name_, \
