@@ -30,7 +30,7 @@ final class CollectionView: UICollectionView {
     }
 
     private func commonInit() {
-        backgroundColor = .systemGroupedBackground
+        backgroundColor = .white
         
         delegate = ext.proxy
         dataSource = ext.dataSource

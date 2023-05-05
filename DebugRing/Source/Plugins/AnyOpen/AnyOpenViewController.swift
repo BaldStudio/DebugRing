@@ -20,7 +20,7 @@ final class AnyOpenViewController: CollectionViewController {
     }
     
     private func setupDataSource() {
-        let section = CollectionViewDefaultSection()
+        let section = CollectionViewSection()
         collectionView.append(section: section)
         
         let item = AnyOpenItem()

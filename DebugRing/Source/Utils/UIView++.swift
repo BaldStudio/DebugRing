@@ -16,11 +16,11 @@ extension UIView {
             leftAnchor.constraint(equalTo: v.leftAnchor,
                                        constant: insets.left),
             rightAnchor.constraint(equalTo: v.rightAnchor,
-                                        constant: insets.right),
+                                        constant: -insets.right),
             topAnchor.constraint(equalTo: v.topAnchor,
                                       constant: insets.top),
             bottomAnchor.constraint(equalTo: v.bottomAnchor,
-                                         constant: insets.bottom),
+                                         constant: -insets.bottom),
         ])
     }
     

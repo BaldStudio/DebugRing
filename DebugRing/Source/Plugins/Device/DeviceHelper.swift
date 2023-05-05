@@ -129,7 +129,7 @@ struct DeviceHelper {
             }
         }
         
-        let size = (vmStats.free_count + vmStats.external_page_count + vmStats.purgeable_count - vmStats.speculative_count) * UInt32(page_size)
+        let size: UInt64 = UInt64(vmStats.free_count + vmStats.external_page_count + vmStats.purgeable_count - vmStats.speculative_count) * UInt64(page_size)
         return String(size / 1024 / 1024) + " MB"
     }
     

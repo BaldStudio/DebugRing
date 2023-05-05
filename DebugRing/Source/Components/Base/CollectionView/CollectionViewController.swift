@@ -18,7 +18,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .white
         view.addSubview(collectionView)
         collectionView.edgesEqualToSuperview()
         collectionView.delegate = self

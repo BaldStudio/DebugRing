@@ -6,7 +6,7 @@ use_frameworks!
 
 target 'DebugRing' do
   
-  pod 'FLEX', '4.7.0'
+  pod 'FLEX', '~> 5.22.10'
     
 end
 

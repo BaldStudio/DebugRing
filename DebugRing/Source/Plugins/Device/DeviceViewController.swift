@@ -73,6 +73,12 @@ private extension DeviceViewController {
             UIPasteboard.general.string = String(data: data, encoding: .utf8)
         }
         
+        let alert = UIAlertController(title: nil, message: "复制成功", preferredStyle: .alert)
+        present(alert, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000), execute: {
+                self.dismiss(animated: true)
+            })
+        }
     }
     
     func onTimer(_ sender: Timer) {
