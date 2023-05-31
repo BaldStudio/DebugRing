@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
       ]
   }
   
-  s.dependency 'FLEX'
+  s.dependency 'FLEX', '~> 5.22.10'
   
 end
