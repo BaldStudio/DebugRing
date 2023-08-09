@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewDefaultSection: CollectionViewSection {
+class CollectionViewDefaultSection: BsCollectionViewSection {
     
     var title = ""
     

@@ -8,23 +8,20 @@
 
 import UIKit
 
+@_exported
+import BsFoundation
+
+@_exported
+import BsUIKit
+
 //MARK: - Logger
 
-let logger: Logger = {
-    let logger = Logger()
+let logger: BsLogger = {
+    let logger = BsLogger(subsystem: "com.bald-studio.DebugRing",
+                          category: "DebugRing")
     logger.level = .none
     return logger
 }()
-
-//MARK: - Screen Size
-
-struct Screen {
-    static let bounds = UIScreen.main.bounds
-    static let size = bounds.size
-    static let width = bounds.width
-    static let height = bounds.height
-    static let scale = UIScreen.main.scale
-}
 
 //MARK: - MachO
 
@@ -45,12 +42,4 @@ extension MachOSegment {
 
 extension MachOSection {
     static let plugin = MachOSection(name: DEBUG_RING_SECT)
-}
-
-//MARK: - Haptic
-
-func haptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
-    let gen = UIImpactFeedbackGenerator(style: style)
-    gen.prepare()
-    gen.impactOccurred()
 }

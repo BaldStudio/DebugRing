@@ -65,7 +65,7 @@ private final class DeviceItemCell: ListViewCell {
         stackView.alignment = .fill
         contentView.addSubview(stackView)
         
-        stackView.edgesEqual(to: self, with: UIEdgeInsets(horizontal: 16, vertical: 0))
+        stackView.bs.edgesEqual(to: self, with: UIEdgeInsets(horizontal: 16, vertical: 0))
     }
     
 }

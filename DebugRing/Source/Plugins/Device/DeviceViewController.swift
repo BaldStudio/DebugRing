@@ -8,13 +8,12 @@
 
 import UIKit
 
-final class DeviceViewController: CollectionViewController {
+final class DeviceViewController: DRCollectionViewController {
     
     private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                             
         showRightBarItem(title: "复制",
                          action: #selector(onCopyAll))
         

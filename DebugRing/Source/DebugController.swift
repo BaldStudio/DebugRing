@@ -69,12 +69,12 @@ public extension DebugController {
 @objc
 public extension DebugController {
     
-    internal static var navigator: NavigationController {
-        shared.ring.presentedViewController as! NavigationController
+    internal static var navigator: BsNavigationController {
+        shared.ring.presentedViewController as! BsNavigationController
     }
 
     static func present(_ viewController: UIViewController) {
-        let nav = NavigationController(rootViewController: viewController)
+        let nav = BsNavigationController(rootViewController: viewController)
         shared.ring.present(nav, animated: true)
     }
     

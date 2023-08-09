@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MockCrashViewController: CollectionViewController {
+final class MockCrashViewController: BsCollectionViewController {
     
     let mocker = DebugCrashMocker()
     
@@ -19,7 +19,7 @@ final class MockCrashViewController: CollectionViewController {
     }
     
     private func setupDataSource() {
-        let section = CollectionViewSection()
+        let section = BsCollectionViewSection()
         collectionView.append(section: section)
         
         for data in mocker.caseData {

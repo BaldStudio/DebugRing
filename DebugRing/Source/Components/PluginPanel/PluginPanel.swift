@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PluginPanel: CollectionViewController {
+final class PluginPanel: DRCollectionViewController {
     
     var pluginRegistrar: PluginRegistrar {
         DebugController.shared.pluginRegistrar
@@ -16,9 +16,7 @@ final class PluginPanel: CollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Debug Ring"
-        
         showRightBarItem(title: "退出",
                          action: #selector(onQuit))
         

@@ -21,6 +21,9 @@ Pod::Spec.new do |s|
       ]
   }
   
+  s.ios.dependency 'BsFoundation'
+  s.ios.dependency 'BsUIKit'
+
   s.dependency 'FLEX', '~> 5.22.10'
   
 end

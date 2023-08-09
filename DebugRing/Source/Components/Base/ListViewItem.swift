@@ -12,9 +12,9 @@ class ListViewItem: CollectionViewHighlightedItem {
     
     override init() {
         super.init()
-        
         cellClass = ListViewCell.self
-        cellSize = CGSize(width: Screen.width, height: 44)
+        preferredFixedAxisSize = .horizontal
+        cellSize = [0, 44]
     }
 }
 
@@ -31,7 +31,7 @@ class ListViewCell: CollectioViewHighlightedCell {
     
     override func commonInit() {
         super.commonInit()
-                
+        contentView.backgroundColor = .white
         contentView.addSubview(separator)
         NSLayoutConstraint.activate([
             separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AnyOpenViewController: CollectionViewController {
+final class AnyOpenViewController: DRCollectionViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ final class AnyOpenViewController: CollectionViewController {
     }
     
     private func setupDataSource() {
-        let section = CollectionViewSection()
+        let section = BsCollectionViewSection()
         collectionView.append(section: section)
         
         let item = AnyOpenItem()

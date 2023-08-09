@@ -79,8 +79,8 @@ final class StatisticsView: UIView {
     private func setupSubviews() {
         
         addSubview(stackView)
-        stackView.edgesEqual(to: self,
-                             with: UIEdgeInsets(horizontal: 8, vertical: 0))
+        stackView.bs.edgesEqual(to: self,
+                                with: UIEdgeInsets(horizontal: 8, vertical: 0))
 
     }
     
@@ -142,7 +142,7 @@ private extension StatisticsView {
             
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            haptic(.heavy)
+            HapticEngine.driven(.heavy)
             toggle()
         }
     }

@@ -8,16 +8,14 @@
 
 import UIKit
 
-class CollectionViewHighlightedItem: CollectionViewItem {
+class CollectionViewHighlightedItem: BsCollectionViewItem {
     
     override init() {
         super.init()
-         
         cellClass = CollectioViewHighlightedCell.self
     }
     
     override func didHighlightItem(at indexPath: IndexPath) {
-        
         guard let cell = cell as? CollectioViewHighlightedCell else { return }
         
         cell.highlightedView.isHidden = false
@@ -32,7 +30,6 @@ class CollectionViewHighlightedItem: CollectionViewItem {
     }
     
     override func didUnhighlightItem(at indexPath: IndexPath) {
-        
         guard let cell = cell as? CollectioViewHighlightedCell else { return }
         
         UIView.animate(withDuration: 0.1,
@@ -70,7 +67,7 @@ class CollectioViewHighlightedCell: UICollectionViewCell {
     func commonInit() {
                 
         contentView.addSubview(highlightedView)
-        highlightedView.edgesEqualToSuperview()
+        highlightedView.bs.edgesEqualToSuperview()
 
     }
 

@@ -38,7 +38,7 @@ final class RingWindow: UIWindow {
     }
 
     override func makeKey() {
-        let window = UIApplication.shared.appKeyWindow
+        let window = BsAppKeyWindow
         if let ringWindow = window as? RingWindow {
             previousKeyWindow = ringWindow.previousKeyWindow
         }

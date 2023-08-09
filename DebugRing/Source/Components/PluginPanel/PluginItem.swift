@@ -14,7 +14,6 @@ final class PluginItem: CollectionViewHighlightedItem {
     
     required override init() {
         super.init()
-        
         cellClass = PluginItemCell.self
     }
         
@@ -54,9 +53,9 @@ private class PluginItemCell: CollectioViewHighlightedCell {
         super.commonInit()
         
         contentView.backgroundColor = .white
-
+        
         highlightedView.layer.cornerRadius = 16
-
+        
         contentView.addSubview(iconView)
         NSLayoutConstraint.activate([
             iconView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
