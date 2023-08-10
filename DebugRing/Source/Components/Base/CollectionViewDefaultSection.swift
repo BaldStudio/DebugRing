@@ -49,7 +49,7 @@ class CollectionViewDefaultSectionHeader: UICollectionReusableView {
                                        green: 144/250,
                                        blue: 1,
                                        alpha: 1)
-        view.layer.cornerRadius = 3
+        view.layer.cornerRadius = 2
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -71,8 +71,8 @@ class CollectionViewDefaultSectionHeader: UICollectionReusableView {
             stubView.leftAnchor.constraint(equalTo: leftAnchor,
                                            constant: 8),
             stubView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            stubView.widthAnchor.constraint(equalToConstant: 8),
-            stubView.heightAnchor.constraint(equalToConstant: 24)
+            stubView.widthAnchor.constraint(equalToConstant: 4),
+            stubView.heightAnchor.constraint(equalToConstant: 20)
         ])
 
         addSubview(titleLabel)
