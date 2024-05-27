@@ -8,32 +8,21 @@
 
 import UIKit
 
-final class MockCrashViewController: BsCollectionViewController {
-    
+final class MockCrashViewController: BaseViewController {
     let mocker = DebugCrashMocker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupDataSource()
     }
     
-    private func setupDataSource() {
-        let section = BsCollectionViewSection()
-        collectionView.append(section: section)
-        
-        for data in mocker.caseData {
-            let item = MockCrashItem(data[0])
-            item.action = performMock(data[1])
+    override func setupDataSource() {
+        for tuple in mocker.caseData {
+            let item = MockCrashItem(tuple[0])
+            let selector = tuple[1]
+            item.onSelectItem = { [weak self] _ in
+                self?.mocker.perform(NSSelectorFromString(selector))
+            }
             section.append(item)
         }
     }
-}
-
-private extension MockCrashViewController {
-    func performMock(_ sel: String) -> () -> Void {
-        { [weak self] in
-            self?.mocker.perform(NSSelectorFromString(sel))
-        }
-    }    
 }

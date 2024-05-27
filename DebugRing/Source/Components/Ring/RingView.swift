@@ -6,13 +6,10 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
-final class RingView: UIView {
-    
-    override init(frame: CGRect) {
-        let frame = CGRect(x: 0, y: 200, width: 64, height: 64)
-        super.init(frame: frame)
+final class RingView: BsUIView {
+    override func commonInit() {
+        super.commonInit()
+        frame = CGRect(x: 0, y: 200, width: 64, height: 64)
         
         layer.borderColor = UIColor(white: 0.3, alpha: 1).cgColor
         layer.borderWidth = 4
@@ -28,18 +25,12 @@ final class RingView: UIView {
         
         setupGestures()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
 //MARK: - Gestures
 
 private extension RingView {
-    
     func setupGestures() {
-        
         let pan = UIPanGestureRecognizer(target: self,
                                          action: #selector(onPan(_:)))
         addGestureRecognizer(pan)
@@ -57,7 +48,6 @@ private extension RingView {
 
 @objc
 private extension RingView {
-    
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)
         center += transPoint
@@ -114,13 +104,11 @@ private extension RingView {
             DebugController.toggle()
         }
     }
-
 }
 
 //MARK: - Change Color
 
 private extension RingView {
-    
     func willChangeRingColor() {
         perform(#selector(changeRingColor), with: nil, afterDelay: 2)
     }
@@ -138,5 +126,4 @@ private extension RingView {
             self.alpha = 0.5
         }
     }
-
 }

@@ -8,16 +8,13 @@
 
 import UIKit
 
-final class DeviceViewController: DRCollectionViewController {
-    
+final class DeviceViewController: BaseViewController {
     private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showRightBarItem(title: "复制",
                          action: #selector(onCopyAll))
-        
-        setupDataSource()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,14 +32,13 @@ final class DeviceViewController: DRCollectionViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         timer?.invalidate()
         timer = nil
     }
     
-    private func setupDataSource() {
+    override func setupDataSource() {
         for cate in categories {
-            let section = CollectionViewDefaultSection(cate)
+            let section = BaseSection(cate)
             collectionView.append(section: section)
             
             let infos = details[cate]!
@@ -56,9 +52,7 @@ final class DeviceViewController: DRCollectionViewController {
 
 @objc
 private extension DeviceViewController {
-    
     func onCopyAll() {
-        
         var report: [String] = []
         for cate in categories {
             let infos = details[cate]!
@@ -89,7 +83,6 @@ private extension DeviceViewController {
 //MARK: - Menu
 
 extension DeviceViewController {
-            
     func collectionView(_ collectionView: UICollectionView,
                         shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         true
@@ -116,7 +109,6 @@ extension DeviceViewController {
 //MARK: - Data
 
 private extension DeviceViewController {
-    
     var categories: [String] {
         [
             "基本信息",

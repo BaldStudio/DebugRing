@@ -6,8 +6,6 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
 protocol RingWindowDelegate: AnyObject {
     func shouldHandleTouch(at point: CGPoint) -> Bool
     var canBecomeKeyWindow: Bool { get }
@@ -38,9 +36,9 @@ final class RingWindow: UIWindow {
     }
 
     override func makeKey() {
-        let window = BsAppKeyWindow
-        if let ringWindow = window as? RingWindow {
-            previousKeyWindow = ringWindow.previousKeyWindow
+        let window = BsApp.keyWindow
+        if let window = window as? RingWindow {
+            previousKeyWindow = window.previousKeyWindow
         }
         else {
             previousKeyWindow = window

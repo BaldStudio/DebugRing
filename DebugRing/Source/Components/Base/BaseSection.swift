@@ -1,21 +1,18 @@
 //
-//  CollectionViewDefaultSection.swift
+//  BaseSection.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/6/8.
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
-class CollectionViewDefaultSection: BsCollectionViewSection {
-    
+class BaseSection: BsCollectionViewSection {
     var title = ""
     
     override init() {
         super.init()
         
-        headerClass = CollectionViewDefaultSectionHeader.self
+        headerClass = BaseSectionHeader.self
         
         headerSize = CGSize(width: Screen.width, height: 54)
         footerSize = CGSize(width: Screen.width, height: 24)
@@ -28,43 +25,30 @@ class CollectionViewDefaultSection: BsCollectionViewSection {
     
     override func update(header: UICollectionReusableView,
                          at indexPath: IndexPath) {
-        let header = header as! CollectionViewDefaultSectionHeader
+        let header = header as! BaseSectionHeader
         header.titleLabel.text = title
     }
 }
 
-class CollectionViewDefaultSectionHeader: UICollectionReusableView {
+class BaseSectionHeader: BsUICollectionSupplementaryView {
     
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = .boldSystemFont(ofSize: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    let titleLabel: UILabel = UILabel().then {
+        $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 20)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
     
-    lazy var stubView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 30/255,
+    let stubView: UIView = UIView().then {
+        $0.backgroundColor = UIColor(red: 30/255,
                                        green: 144/250,
                                        blue: 1,
                                        alpha: 1)
-        view.layer.cornerRadius = 2
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        commonInit()
+        $0.applying(rounded: 2)
+        $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func commonInit() {
+    override func commonInit() {
+        super.commonInit()
         backgroundColor = .white
         addSubview(stubView)
         NSLayoutConstraint.activate([
@@ -82,6 +66,5 @@ class CollectionViewDefaultSectionHeader: UICollectionReusableView {
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             titleLabel.rightAnchor.constraint(equalTo: rightAnchor),
         ])
-
     }
 }

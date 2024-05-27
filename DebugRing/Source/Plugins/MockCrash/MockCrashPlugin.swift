@@ -10,7 +10,6 @@
 import UIKit
 
 final class MockCrashPlugin: DebugPlugin {
-    
     let name = "模拟Crash"
     let icon = UIImage(debug: "crash.mock")
     let instruction = "模拟各种常见的crash场景"

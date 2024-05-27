@@ -8,8 +8,7 @@
 
 import UIKit
 
-final class DeviceItem: ListViewItem {
-    
+final class DeviceItem: RowItem {
     var info: DeviceInfo!
     
     override init() {
@@ -31,8 +30,7 @@ final class DeviceItem: ListViewItem {
     }
 }
 
-private final class DeviceItemCell: ListViewCell {
-    
+private final class DeviceItemCell: RowItemCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +63,6 @@ private final class DeviceItemCell: ListViewCell {
         stackView.alignment = .fill
         contentView.addSubview(stackView)
         
-        stackView.bs.edgesEqual(to: self, with: UIEdgeInsets(horizontal: 16, vertical: 0))
+        stackView.edgesEqual(to: self, with: UIEdgeInsets(horizontal: 16, vertical: 0))
     }
-    
 }

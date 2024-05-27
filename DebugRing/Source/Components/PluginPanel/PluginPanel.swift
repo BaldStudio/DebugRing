@@ -8,8 +8,7 @@
 
 import UIKit
 
-final class PluginPanel: DRCollectionViewController {
-    
+final class PluginPanel: BaseViewController {
     var pluginRegistrar: PluginRegistrar {
         DebugController.shared.pluginRegistrar
     }
@@ -19,46 +18,38 @@ final class PluginPanel: DRCollectionViewController {
         title = "Debug Ring"
         showRightBarItem(title: "退出",
                          action: #selector(onQuit))
-        
-        setupDataSource()
     }
     
-    private func setupDataSource() {
-        
+    override func setupDataSource() {
         let spinner = SpinnerViewController()
         spinner.show(in: self)
-        
-        DispatchQueue.global().async {
+        Async {
             let group = PluginGroup()
             self.collectionView.append(section: group)
             
             let plugins = self.pluginRegistrar.plugins
             for name in plugins {
-                guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type
-                else {
-                    logger.warning("跳过无法识别的插件：\(name)")
+                guard let pluginClass = NSClassFromString(name) as? DebugPlugin.Type else {
+                    logger.warn("跳过无法识别的插件：\(name)")
                     continue
                 }
                             
                 let item = PluginItem()
                 item.plugin = pluginClass.init()
-                item.cellSize = group.itemSize
+                item.size = group.itemSize
                 group.append(item)
             }
 
             logger.info("已加载插件: \(self.pluginRegistrar)")
-
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                spinner.hide()
-            }
+        }.main {
+            self.collectionView.reloadData()
+            spinner.hide()
         }
     }
 }
 
 @objc
 private extension PluginPanel {
-    
     func onQuit() {
         DebugController.dismissViewController()
     }

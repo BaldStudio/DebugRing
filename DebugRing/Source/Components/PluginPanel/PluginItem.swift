@@ -8,8 +8,7 @@
 
 import UIKit
 
-final class PluginItem: CollectionViewHighlightedItem {
-    
+final class PluginItem: BaseItem {
     var plugin: DebugPlugin!
     
     required override init() {
@@ -24,30 +23,26 @@ final class PluginItem: CollectionViewHighlightedItem {
         cell.iconView.image = plugin.icon
     }
     
-    override func didSelectItem(at indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         plugin.onDidSelect()
     }
 }
 
-private class PluginItemCell: CollectioViewHighlightedCell {
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = .boldSystemFont(ofSize: 12)
-        label.textColor = UIColor(white: 0.3, alpha: 1.0)
-        label.numberOfLines = 2
-        return label
-    }()
+private class PluginItemCell: BaseItemCell {
+    let nameLabel: UILabel = UILabel().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.textAlignment = .center
+        $0.font = .boldSystemFont(ofSize: 12)
+        $0.textColor = UIColor(white: 0.3, alpha: 1.0)
+        $0.numberOfLines = 2
+    }
     
-    lazy var iconView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 8
-        imageView.layer.masksToBounds = true
-        return imageView
-    }()
+    let iconView: UIImageView = UIImageView().then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentMode = .scaleAspectFit
+        $0.layer.cornerRadius = 8
+        $0.layer.masksToBounds = true
+    }
         
     override func commonInit() {
         super.commonInit()

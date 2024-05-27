@@ -6,10 +6,7 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
-final class RingViewController: UIViewController {
-    
+final class RingViewController: BsUIViewController {
     private var menuWindow: UIWindow?
     private var originMenuWindowLevel: UIWindow.Level = .normal
 
@@ -57,11 +54,9 @@ final class RingViewController: UIViewController {
         v.removeFromSuperview()
         touchReceivers.remove(v)
     }
-
 }
 
 extension RingViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +66,6 @@ extension RingViewController {
     }
     
     private func setupNotifications() {
-        
         let noteCenter = NotificationCenter.default
         noteCenter.addObserver(self,
                                selector: #selector(onMenuWillShow(_:)),
@@ -122,12 +116,10 @@ extension RingViewController {
         }
         super.dismiss(animated: flag, completion: completion)
     }
-
 }
 
 @objc
 private extension RingViewController {
-    
     func onMenuWillShow(_ note: Notification) {
         menuWindow = findMenuWindow()
         guard let menuWindow = menuWindow else { return }
@@ -141,5 +133,4 @@ private extension RingViewController {
 
         menuWindow.windowLevel = originMenuWindowLevel
     }
-
 }

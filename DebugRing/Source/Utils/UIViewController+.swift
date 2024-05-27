@@ -1,15 +1,12 @@
 //
-//  UIViewController++.swift
+//  UIViewController+.swift
 //  DebugRing
 //
 //  Created by crzorz on 2022/7/8.
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
 extension UIViewController {
-    
     enum BackBarItemStyle {
         case arrow
     }
@@ -39,5 +36,4 @@ extension UIViewController {
                                                   target: self,
                                                   action: action)
     }
-
 }

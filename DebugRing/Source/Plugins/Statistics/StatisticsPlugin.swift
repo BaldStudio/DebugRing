@@ -9,7 +9,6 @@
 import UIKit
 
 final class StatisticsPlugin: DebugPlugin {
-    
     private lazy var statsView = StatisticsView.shared
 
     let name = "性能监控"

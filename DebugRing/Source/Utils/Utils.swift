@@ -6,22 +6,11 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
-@_exported
-import BsFoundation
-
-@_exported
-import BsUIKit
+@_exported import BsFoundation
 
 //MARK: - Logger
 
-let logger: BsLogger = {
-    let logger = BsLogger(subsystem: "com.bald-studio.DebugRing",
-                          category: "DebugRing")
-    logger.level = .none
-    return logger
-}()
+let logger = Logger(label: "DebugRing")
 
 //MARK: - MachO
 
@@ -32,7 +21,7 @@ struct PluginData: MachODataConvertible {
     let name: String
 
     static func convert(_ t: RawType) -> Self {
-        Self(name: String(cString: t.name))
+        PluginData(name: String(cString: t.name))
     }
 }
 

@@ -9,7 +9,6 @@
 import Foundation
 
 final class PluginRegistrar {
-
     var plugins: [String] = []
     
     init() {
@@ -61,7 +60,6 @@ final class PluginRegistrar {
 }
 
 extension PluginRegistrar: CustomStringConvertible {
-    
     var description: String {
         if let data = try? JSONSerialization.data(withJSONObject: plugins,
                                                   options: [.fragmentsAllowed, .prettyPrinted]),

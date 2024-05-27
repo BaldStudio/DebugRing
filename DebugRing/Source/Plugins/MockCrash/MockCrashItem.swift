@@ -8,10 +8,8 @@
 
 import UIKit
 
-final class MockCrashItem: ListViewItem {
-    
+final class MockCrashItem: RowItem {
     var title = ""
-    var action: (() -> Void)?
     
     convenience init(_ title: String) {
         self.init()
@@ -20,15 +18,11 @@ final class MockCrashItem: ListViewItem {
     
     override init() {
         super.init()
-        cellClass = ListViewNormalCell.self
+        cellClass = PrimaryRowItemCell.self
     }
     
     override func update(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
-        let cell = cell as! ListViewNormalCell
+        let cell = cell as! PrimaryRowItemCell
         cell.titleLabel.text = title
-    }
-    
-    override func didSelectItem(at indexPath: IndexPath) {
-        action?()
     }
 }

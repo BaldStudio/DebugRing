@@ -79,8 +79,8 @@ final class StatisticsView: UIView {
     private func setupSubviews() {
         
         addSubview(stackView)
-        stackView.bs.edgesEqual(to: self,
-                                with: UIEdgeInsets(horizontal: 8, vertical: 0))
+        stackView.edgesEqual(to: self,
+                             with: UIEdgeInsets(horizontal: 8, vertical: 0))
 
     }
     
@@ -104,7 +104,6 @@ final class StatisticsView: UIView {
 
 @objc
 private extension StatisticsView {
-    
     func onPan(_ sender: UIPanGestureRecognizer) {
         let transPoint = sender.translation(in: superview)
         center += transPoint

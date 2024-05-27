@@ -6,8 +6,6 @@
 //  Copyright © 2022 BaldStudio. All rights reserved.
 //
 
-import UIKit
-
 final class SpinnerViewController: UIViewController {
     let spinner = UIActivityIndicatorView(style: .large)
 
@@ -31,11 +29,10 @@ final class SpinnerViewController: UIViewController {
 }
 
 extension SpinnerViewController {
-    
     func show(in parent: UIViewController) {
         parent.addChild(self)
-        view.frame = parent.view.frame
         parent.view.addSubview(view)
+        view.edgesEqualToSuperview()
         didMove(toParent: parent)
     }
     
