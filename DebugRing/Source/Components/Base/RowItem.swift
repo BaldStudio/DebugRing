@@ -25,8 +25,8 @@ class RowItemCell: BaseItemCell {
         $0.layer.zPosition = 10
     }
     
-    override func commonInit() {
-        super.commonInit()
+    override func onInit() {
+        super.onInit()
         contentView.backgroundColor = .white
         contentView.addSubview(separator)
         NSLayoutConstraint.activate([
@@ -55,8 +55,8 @@ class PrimaryRowItemCell: RowItemCell {
         $0.contentMode = .center
     }
     
-    override func commonInit() {
-        super.commonInit()
+    override func onInit() {
+        super.onInit()
         contentView.addSubview(arrow)
         NSLayoutConstraint.activate([
             arrow.rightAnchor.constraint(equalTo: contentView.rightAnchor,

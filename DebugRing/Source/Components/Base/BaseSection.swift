@@ -11,7 +11,6 @@ class BaseSection: BsCollectionViewSection {
     
     override init() {
         super.init()
-        
         headerClass = BaseSectionHeader.self
         
         headerSize = CGSize(width: Screen.width, height: 54)
@@ -31,7 +30,6 @@ class BaseSection: BsCollectionViewSection {
 }
 
 class BaseSectionHeader: BsUICollectionSupplementaryView {
-    
     let titleLabel: UILabel = UILabel().then {
         $0.textColor = .black
         $0.font = .boldSystemFont(ofSize: 20)
@@ -47,8 +45,8 @@ class BaseSectionHeader: BsUICollectionSupplementaryView {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    override func commonInit() {
-        super.commonInit()
+    override func onInit() {
+        super.onInit()
         backgroundColor = .white
         addSubview(stubView)
         NSLayoutConstraint.activate([

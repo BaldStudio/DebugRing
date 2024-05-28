@@ -7,8 +7,8 @@
 //
 
 final class RingView: BsUIView {
-    override func commonInit() {
-        super.commonInit()
+    override func onInit() {
+        super.onInit()
         frame = CGRect(x: 0, y: 200, width: 64, height: 64)
         
         layer.borderColor = UIColor(white: 0.3, alpha: 1).cgColor

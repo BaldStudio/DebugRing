@@ -44,8 +44,8 @@ class BaseItemCell: BsUICollectionViewCell {
         $0.isHidden = true
     }
     
-    override func commonInit() {
-     super.commonInit()
+    override func onInit() {
+     super.onInit()
         contentView.addSubview(highlightedView)
         highlightedView.edgesEqualToSuperview()
     }

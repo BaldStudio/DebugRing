@@ -9,7 +9,6 @@
 import UIKit
 
 public final class DebugController: NSObject {
-
     lazy var window = RingWindow(frame: Screen.bounds)
     
     lazy var ring = RingViewController()
@@ -37,7 +36,6 @@ public final class DebugController: NSObject {
 
 @objc
 public extension DebugController {
-    
     static func show() {
         shared.window.isHidden = false
     }
@@ -68,7 +66,6 @@ public extension DebugController {
 
 @objc
 public extension DebugController {
-    
     internal static var navigator: BsNavigationController {
         shared.ring.presentedViewController as! BsNavigationController
     }
@@ -78,7 +75,7 @@ public extension DebugController {
         shared.ring.present(nav, animated: true)
     }
     
-    static func dismissViewController() {
+    static func dismiss() {
         shared.ring.dismiss(animated: true)
     }
     
@@ -90,17 +87,15 @@ public extension DebugController {
         navigator.pushViewController(viewController, animated: true)
     }
     
-    static func popViewController() {
+    static func pop() {
         navigator.popViewController(animated: true)
     }
-
 }
 
 //MARK: - Plugin
 
 @objc
 public extension DebugController {
-    
     static var plugins: [String] {
         shared.pluginRegistrar.plugins
     }
@@ -115,13 +110,11 @@ public extension DebugController {
                                 for bundleName: String) -> Bool {
         shared.pluginRegistrar.registerPlugins(from: plistPath, for: bundleName)
     }
-
 }
 
 //MARK: - RingWindowDelegate
 
 extension DebugController: RingWindowDelegate {
-    
     func shouldHandleTouch(at pointInWindow: CGPoint) -> Bool {
         ring.shouldReceiveTouch(at: pointInWindow)
     }
@@ -129,14 +122,12 @@ extension DebugController: RingWindowDelegate {
     var canBecomeKeyWindow: Bool {
         ring.windowBecomeKeyIfCould
     }
-
 }
 
 // MARK: Bootstrap
 
 @objc
 private extension DebugController {
-    
     static func objcLoad() {
         RingWindow.replaceMethods()
         
@@ -149,13 +140,11 @@ private extension DebugController {
     
     static func onApplicationDidFinishLaunching(_ note: Notification) {
         logger.info("DebugRing已启动")
-        
         show()
-
-        for scene in UIApplication.shared.connectedScenes {
-            if scene.activationState == .foregroundActive,
-                let windowScene = scene as? UIWindowScene {
+        for scene in BsApp.connectedScenes where scene.activationState == .foregroundActive {
+            if let windowScene = scene as? UIWindowScene {
                 shared.window.windowScene = windowScene
+                break
             }
         }
     }

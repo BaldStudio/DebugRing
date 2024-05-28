@@ -44,8 +44,8 @@ private class PluginItemCell: BaseItemCell {
         $0.layer.masksToBounds = true
     }
         
-    override func commonInit() {
-        super.commonInit()
+    override func onInit() {
+        super.onInit()
         
         contentView.backgroundColor = .white
         

@@ -7,6 +7,5 @@
 //
 
 extension Bundle {
-    static let debug = Bundle(path: main.path(forResource: "DebugRing",
-                                              ofType: "bundle")!)!
+    static let debug = Bundle(for: "DebugRing")!
 }

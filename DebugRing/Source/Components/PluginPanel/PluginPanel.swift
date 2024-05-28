@@ -51,6 +51,6 @@ final class PluginPanel: BaseViewController {
 @objc
 private extension PluginPanel {
     func onQuit() {
-        DebugController.dismissViewController()
+        DebugController.dismiss()
     }
 }

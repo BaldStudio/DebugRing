@@ -53,16 +53,14 @@ private final class DeviceItemCell: RowItemCell {
         return label
     }()
 
-    override func commonInit() {
-        super.commonInit()
-        
+    override func onInit() {
+        super.onInit()
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.spacing = 16
         stackView.axis = .horizontal
         stackView.distribution = .fill
         stackView.alignment = .fill
         contentView.addSubview(stackView)
-        
         stackView.edgesEqual(to: self, with: UIEdgeInsets(horizontal: 16, vertical: 0))
     }
 }
