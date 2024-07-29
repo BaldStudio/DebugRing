@@ -6,7 +6,7 @@
 //  Copyright © 2021 BaldStudio. All rights reserved.
 //
 
-import UIKit
+@_exported import BsFoundation
 
 public final class DebugController: NSObject {
     lazy var window = RingWindow(frame: Screen.bounds)

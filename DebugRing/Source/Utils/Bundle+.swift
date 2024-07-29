@@ -7,5 +7,5 @@
 //
 
 extension Bundle {
-    static let debug = Bundle(for: "DebugRing")!
+    static let debug = Bundle(for: MODULE_NAME)!
 }

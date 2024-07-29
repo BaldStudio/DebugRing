@@ -12,9 +12,9 @@ final class PluginRegistrar {
     var plugins: [String] = []
     
     init() {
-        if let plistPath = Bundle.debug.path(forResource: "DebugPlugins",
+        if let plistPath = Bundle.debug.path(forResource: "Plugins",
                                              ofType: "plist") {
-            registerPlugins(from: plistPath, for: "DebugRing")
+            registerPlugins(from: plistPath, for: MODULE_NAME)
         }
         registerPluginsFromMachO()
     }

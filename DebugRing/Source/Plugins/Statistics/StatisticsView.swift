@@ -141,7 +141,7 @@ private extension StatisticsView {
             
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            HapticEngine.driven(.heavy)
+            HapticEngine.drive(.heavy)
             toggle()
         }
     }

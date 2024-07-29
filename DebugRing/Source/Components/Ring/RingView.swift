@@ -38,7 +38,7 @@ private extension RingView {
         let tap = UITapGestureRecognizer(target: self,
                                          action: #selector(onTap(_:)))
         addGestureRecognizer(tap)
-
+        
         let longPress = UILongPressGestureRecognizer(target: self,
                                                      action: #selector(onLongPress(_:)))
         longPress.minimumPressDuration = 2
@@ -89,7 +89,7 @@ private extension RingView {
     
     func onTap(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            HapticEngine.driven(.medium)
+            HapticEngine.drive(.medium)
             cancelChangeRingColor()
             willChangeRingColor()
             
@@ -100,7 +100,7 @@ private extension RingView {
     @objc
     func onLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began {
-            HapticEngine.driven(.heavy)
+            HapticEngine.drive(.heavy)
             DebugController.toggle()
         }
     }

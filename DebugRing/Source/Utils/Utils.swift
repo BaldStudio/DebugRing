@@ -8,9 +8,11 @@
 
 @_exported import BsFoundation
 
+let MODULE_NAME = "DebugRing"
+
 //MARK: - Logger
 
-let logger = Logger(label: "DebugRing")
+let logger = Logger(label: MODULE_NAME)
 
 //MARK: - MachO
 
