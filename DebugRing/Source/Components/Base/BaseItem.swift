@@ -12,7 +12,7 @@ class BaseItem: BsCollectionViewMutableItem {
         cellClass = BaseItemCell.self
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+    override func didHighlightItem(at indexPath: IndexPath) {
         guard let cell = cell as? BaseItemCell else { return }
         
         cell.highlightedView.isHidden = false
@@ -25,7 +25,7 @@ class BaseItem: BsCollectionViewMutableItem {
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+    override func didUnhighlightItem(at indexPath: IndexPath) {
         guard let cell = cell as? BaseItemCell else { return }
         UIView.animate(withDuration: 0.1,
                        delay: 0,

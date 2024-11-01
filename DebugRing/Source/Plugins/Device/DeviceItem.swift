@@ -22,9 +22,8 @@ final class DeviceItem: RowItem {
         self.info = info
     }
     
-    override func update(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
+    override func cellForItem(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
         let cell = cell as! DeviceItemCell
-        
         cell.titleLabel.text = info.name
         cell.subtitleLabel.text = info.value
     }

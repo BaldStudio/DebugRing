@@ -16,14 +16,13 @@ final class PluginItem: BaseItem {
         cellClass = PluginItemCell.self
     }
         
-    override func update(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
+    override func cellForItem(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
         guard let cell = cell as? PluginItemCell else { return }
-        
         cell.nameLabel.text = plugin.name
         cell.iconView.image = plugin.icon
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func didSelectItem(at indexPath: IndexPath) {
         plugin.onDidSelect()
     }
 }

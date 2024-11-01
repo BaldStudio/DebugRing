@@ -7,5 +7,9 @@
 //
 
 extension Bundle {
-    static let debug = Bundle(for: MODULE_NAME)!
+    static let debug = Bundle(for: ModuleName)!
+    
+    static func resourcePath(for name: String) -> String? {
+        debug.path(forResource: name, ofType: nil) ?? Bundle.main.path(forResource: name, ofType: nil)
+    }
 }

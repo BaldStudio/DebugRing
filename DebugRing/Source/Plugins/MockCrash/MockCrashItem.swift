@@ -21,7 +21,7 @@ final class MockCrashItem: RowItem {
         cellClass = PrimaryRowItemCell.self
     }
     
-    override func update(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
+    override func cellForItem(_ cell: UICollectionViewCell, at indexPath: IndexPath) {
         let cell = cell as! PrimaryRowItemCell
         cell.titleLabel.text = title
     }

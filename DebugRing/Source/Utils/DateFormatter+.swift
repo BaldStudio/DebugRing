@@ -7,9 +7,7 @@
 //
 
 extension DateFormatter {
-    static let common: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
-        return formatter
-    }()
+    static let common = DateFormatter().then {
+        $0.dateFormat = "yyyy-MM-dd HH:mm:ss:SSS"
+    }
 }

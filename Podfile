@@ -7,6 +7,7 @@ use_frameworks!
 
 target 'DebugRing' do
   pod 'BsFoundation', :path => '../BsFoundation'
+  pod 'BsLog', :path => '../BsLog'
   pod 'FLEX', '~> 5.22.10'
 end
 

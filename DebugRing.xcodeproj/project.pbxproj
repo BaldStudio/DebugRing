@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D0BBA91AD54E73166D8728C /* Pods_DebugRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F01A7B51D0EF432462FBC3A /* Pods_DebugRing.framework */; };
+		6FC1EB9D2CD4CFEA0014D864 /* DebugRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1EB9C2CD4CFEA0014D864 /* DebugRing.swift */; };
 		C35368A2F28ACDDBE9D17EE4 /* Pods_DebugRingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F78F012DE1EE6ECF0738F4D /* Pods_DebugRingDemo.framework */; };
 		D211C74B26AD2C6800432511 /* DebugRing.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D211C74A26AD2C6800432511 /* DebugRing.xcassets */; };
 		D22590AC284F10EF00F1188B /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22590AB284F10EF00F1188B /* DeviceViewController.swift */; };
@@ -48,7 +49,7 @@
 		D2EB0A9B287EC4A9002FC0C9 /* AnyOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0A9A287EC4A9002FC0C9 /* AnyOpenViewController.swift */; };
 		D2F42E1E284EA7AD00FAF01D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1D284EA7AD00FAF01D /* RingView.swift */; };
 		D2F42E20284EA7B800FAF01D /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E1F284EA7B800FAF01D /* RingViewController.swift */; };
-		D2F42E25284EB73100FAF01D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* Utils.swift */; };
+		D2F42E25284EB73100FAF01D /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E24284EB73100FAF01D /* MachO.swift */; };
 		D2F42E27284EB81C00FAF01D /* PluginPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42E26284EB81C00FAF01D /* PluginPanel.swift */; };
 		D2FF07922876C2B300B97FD7 /* DebugRingLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */; };
 		D2FF07932876C2B300B97FD7 /* DebugRingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */; };
@@ -72,6 +73,7 @@
 		1F78F012DE1EE6ECF0738F4D /* Pods_DebugRingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugRingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C4F0B2DAD2BD26B60AB3F1 /* Pods-DebugRing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.release.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.release.xcconfig"; sourceTree = "<group>"; };
 		4FFF340D47571F74103F5E0E /* Pods-DebugRing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRing.debug.xcconfig"; path = "Target Support Files/Pods-DebugRing/Pods-DebugRing.debug.xcconfig"; sourceTree = "<group>"; };
+		6FC1EB9C2CD4CFEA0014D864 /* DebugRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugRing.swift; sourceTree = "<group>"; };
 		6FCC78D82C53AC9300EB8975 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6FCC78D92C53AC9300EB8975 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		72D85B6294F3589B9CCD05B7 /* Pods-DebugRingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugRingDemo.release.xcconfig"; path = "Target Support Files/Pods-DebugRingDemo/Pods-DebugRingDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,9 +123,9 @@
 		D2F3DFA0269FD3D8006DB903 /* DebugRingDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugRingDemo.entitlements; sourceTree = "<group>"; };
 		D2F42E1D284EA7AD00FAF01D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		D2F42E1F284EA7B800FAF01D /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
-		D2F42E24284EB73100FAF01D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D2F42E24284EB73100FAF01D /* MachO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachO.swift; sourceTree = "<group>"; };
 		D2F42E26284EB81C00FAF01D /* PluginPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginPanel.swift; sourceTree = "<group>"; };
-		D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DebugRing.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D2FCEA6A25F9F779005EAA15 /* DebugRing.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = DebugRing.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D2FF078D2876C2B300B97FD7 /* DebugRingLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugRingLoader.h; sourceTree = "<group>"; };
 		D2FF078E2876C2B300B97FD7 /* DebugRingLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRingLoader.m; sourceTree = "<group>"; };
 		D2FF078F2876C2B300B97FD7 /* DebugCrashMocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugCrashMocker.h; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		D27A8A28252052BE006A6125 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6FC1EB9C2CD4CFEA0014D864 /* DebugRing.swift */,
 				D27A8A982520AEAC006A6125 /* DebugController.swift */,
 				D22590F12850C78900F1188B /* DebugPlugin.swift */,
 				D29115CB284EFF4A000989DF /* Plugins */,
@@ -375,7 +378,7 @@
 		D2F42E21284EB65400FAF01D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D2F42E24284EB73100FAF01D /* Utils.swift */,
+				D2F42E24284EB73100FAF01D /* MachO.swift */,
 				D2926AC42877D348006F8215 /* UIViewController+.swift */,
 				D2A64DF92A048F5500200B7C /* UIImage+.swift */,
 				D2A64DFB2A048F7600200B7C /* Bundle+.swift */,
@@ -637,7 +640,8 @@
 				D2D49FD2285154D4006B5448 /* StatisticsHelper.swift in Sources */,
 				D29115C2284ECAE9000989DF /* PluginRegistrar.swift in Sources */,
 				D29115E0284F0AE8000989DF /* StatisticsPlugin.swift in Sources */,
-				D2F42E25284EB73100FAF01D /* Utils.swift in Sources */,
+				D2F42E25284EB73100FAF01D /* MachO.swift in Sources */,
+				6FC1EB9D2CD4CFEA0014D864 /* DebugRing.swift in Sources */,
 				D2A64DFC2A048F7600200B7C /* Bundle+.swift in Sources */,
 				D2926AC52877D348006F8215 /* UIViewController+.swift in Sources */,
 				D22590B2284F114200F1188B /* DeviceHelper.swift in Sources */,

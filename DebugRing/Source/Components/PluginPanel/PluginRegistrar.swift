@@ -12,9 +12,8 @@ final class PluginRegistrar {
     var plugins: [String] = []
     
     init() {
-        if let plistPath = Bundle.debug.path(forResource: "Plugins",
-                                             ofType: "plist") {
-            registerPlugins(from: plistPath, for: MODULE_NAME)
+        if let plistPath = Bundle.resourcePath(for: "Plugins.plist") {
+            registerPlugins(from: plistPath, for: ModuleName)
         }
         registerPluginsFromMachO()
     }
@@ -66,6 +65,6 @@ extension PluginRegistrar: CustomStringConvertible {
            let json = String(data: data, encoding: .utf8) {
             return json
         }
-        return "[]"
+        return .empty
     }
 }

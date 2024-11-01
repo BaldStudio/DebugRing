@@ -19,7 +19,7 @@ final class MockCrashViewController: BaseViewController {
         for tuple in mocker.caseData {
             let item = MockCrashItem(tuple[0])
             let selector = tuple[1]
-            item.onSelectItem = { [weak self] _ in
+            item.onDidSelectItem = { [weak self] _ in
                 self?.mocker.perform(NSSelectorFromString(selector))
             }
             section.append(item)

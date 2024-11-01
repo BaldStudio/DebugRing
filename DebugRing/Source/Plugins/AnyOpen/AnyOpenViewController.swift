@@ -18,7 +18,7 @@ final class AnyOpenViewController: BaseViewController {
     override func setupDataSource() {
         let item = AnyOpenItem()
         item.title = "再说吧"
-        item.onSelectItem = { _ in
+        item.onDidSelectItem = { _ in
             logger.info("再说吧")
         }
         section.append(item)
